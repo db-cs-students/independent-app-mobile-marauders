@@ -7,13 +7,55 @@
 
 import SwiftUI
 
-var password : String = ""
 
 struct Login_Screen: View {
-    @State var username : String = "a"
+    @State var username : String = ""
+    @State var password : String = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        TextField("User name", text : $username)
+        VStack {
+            HStack {
+                Text("Username:")
+                TextField("Username", text : $username)
+                    .disableAutocorrection(true)
+            }
+            .padding()
+            HStack {
+                Text("Password:")
+                SecureField("Password", text : $password)
+                    .disableAutocorrection(true)
+            }
+            .padding()
+            Text(username)
+                .padding()
+            
+            Text(password)
+                .padding()
+            HStack {
+                Button(action: {
+                    
+                }, label: {
+                    Text("Log In")
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(.black)
+                })
+                .border(Color("Pink"), width: 2)
+                .padding()
+                
+                Button(action: {
+                    
+                }, label: {
+                    Text("Create Account")
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(.black)
+                        
+                })
+                .background(Color("Pink"))
+                .padding()
+            }
+        }
+        .background(Color("Background"))
     }
 }
 
