@@ -9,14 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            Color("Background").ignoresSafeArea()
+            Login_Screen()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Login_Screen()
-            .background(Color("Background"))
     }
 }

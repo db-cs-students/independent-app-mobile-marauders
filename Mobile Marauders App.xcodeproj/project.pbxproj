@@ -57,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				3D74A95B273ED4580087EA4B /* Mobile_Marauders_AppApp.swift */,
+				3DF328B52742D4B10092B446 /* Navigation */,
 				3D74A96D273ED5CF0087EA4B /* Views */,
 				3D74A96C273ED5C70087EA4B /* Helpers */,
 				3D74A95F273ED45B0087EA4B /* Assets.xcassets */,
@@ -85,10 +86,17 @@
 			isa = PBXGroup;
 			children = (
 				3D74A95D273ED4580087EA4B /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3DF328B52742D4B10092B446 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
 				3D732336273ED86600B69F64 /* Login Screen.swift */,
 				3DF328B32742D48C0092B446 /* New User.swift */,
 			);
-			path = Views;
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
