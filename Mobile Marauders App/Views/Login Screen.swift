@@ -18,10 +18,10 @@ struct Login_Screen: View {
                 Image("Dollar")
                     .resizable()
                     .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.black, lineWidth: 0.35))
+                    .overlay(Circle().stroke(Color.black, lineWidth: 1))
                     .frame(width: 200, height: 200)
                     .padding(.bottom, 40)
-                VStack {
+                VStack(alignment: .leading) {
                     Text("Username:")
                     TextField("Username", text : $username)
                         .disableAutocorrection(true)
@@ -32,7 +32,7 @@ struct Login_Screen: View {
                         )
                 }
                 .padding()
-                VStack {
+                VStack(alignment: .leading) {
                     Text("Password:")
                     SecureField("Password", text : $password)
                         .disableAutocorrection(true)
@@ -43,11 +43,6 @@ struct Login_Screen: View {
                         )
                 }
                 .padding()
-                Text(username)
-                    .padding()
-                
-                Text(password)
-                    .padding()
                 
                 Spacer()
                 
@@ -82,7 +77,7 @@ struct Login_Screen: View {
                     .padding()
                     
                 }
-                .padding(.bottom, 40)
+                .padding(.bottom, 100)
             }
         }
         
