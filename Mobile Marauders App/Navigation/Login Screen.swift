@@ -20,6 +20,7 @@ struct Login_Screen: View {
                     .clipShape(Circle())
                     .overlay(Circle().stroke(Color.black, lineWidth: 1))
                     .frame(width: 200, height: 200)
+                    .padding(.top, 40)
                     .padding(.bottom, 40)
                 VStack(alignment: .leading) {
                     Text("Username:")
@@ -60,27 +61,25 @@ struct Login_Screen: View {
                                     .shadow(radius: 2, y:2)
                     )
                     .padding()
-                    
-                    Button(action: {
-                        
-                    }, label: {
+                    NavigationLink(destination: New_User()){
                         Text("Create Account")
                             .frame(minWidth: 0, maxWidth: .infinity)
                             .padding()
                             .foregroundColor(.black)
-                        
-                    })
-                    .background(RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color("Pink"))
-                                    .shadow(radius: 2, y:2)
-                    )
+                            .background(RoundedRectangle(cornerRadius: 10)
+                                            .fill(Color("Pink"))
+                                            .shadow(radius: 2, y:2)
+                            )
+                    }
                     .padding()
                     
                 }
                 .padding(.bottom, 100)
             }
         }
-        
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

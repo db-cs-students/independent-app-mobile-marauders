@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D4EEF892744237B006E7E89 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EEF882744237B006E7E89 /* Questions.swift */; };
 		3D732337273ED86600B69F64 /* Login Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D732336273ED86600B69F64 /* Login Screen.swift */; };
 		3D74A95C273ED4580087EA4B /* Mobile_Marauders_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D74A95B273ED4580087EA4B /* Mobile_Marauders_AppApp.swift */; };
 		3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D74A95D273ED4580087EA4B /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D4EEF882744237B006E7E89 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		3D732336273ED86600B69F64 /* Login Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login Screen.swift"; sourceTree = "<group>"; };
 		3D74A958273ED4580087EA4B /* Mobile Marauders App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Marauders App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D74A95B273ED4580087EA4B /* Mobile_Marauders_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Marauders_AppApp.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				3D732336273ED86600B69F64 /* Login Screen.swift */,
 				3DF328B32742D48C0092B446 /* New User.swift */,
+				3D4EEF882744237B006E7E89 /* Questions.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */,
 				3D74A95C273ED4580087EA4B /* Mobile_Marauders_AppApp.swift in Sources */,
 				3DF328B42742D48C0092B446 /* New User.swift in Sources */,
+				3D4EEF892744237B006E7E89 /* Questions.swift in Sources */,
 				3D732337273ED86600B69F64 /* Login Screen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
