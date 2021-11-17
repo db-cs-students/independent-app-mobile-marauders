@@ -22,28 +22,9 @@ struct Login_Screen: View {
                     .frame(width: 200, height: 200)
                     .padding(.top, 40)
                     .padding(.bottom, 40)
-                VStack(alignment: .leading) {
-                    Text("Username:")
-                    TextField("Username", text : $username)
-                        .disableAutocorrection(true)
-                        .padding()
-                        .background(RoundedRectangle(cornerRadius: 10)
-                                        .fill(Color.white)
-                                        .shadow(radius: 2, y:2)
-                        )
-                }
-                .padding()
-                VStack(alignment: .leading) {
-                    Text("Password:")
-                    SecureField("Password", text : $password)
-                        .disableAutocorrection(true)
-                        .padding()
-                        .background(RoundedRectangle(cornerRadius: 10)
-                                        .fill(Color.white)
-                                        .shadow(radius: 2, y:2)
-                        )
-                }
-                .padding()
+                
+                CustomTextField(leadingString: "Username:", caption: "Username", text: username)
+                CustomTextField(leadingString: "Password:", caption: "Password", text: password)
                 
                 Spacer()
                 

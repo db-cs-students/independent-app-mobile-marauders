@@ -7,42 +7,23 @@
 
 import SwiftUI
 
+
 struct New_User: View {
     @State var newUsername : String = ""
     @State var newPassword : String = ""
     @State var confirmedPassword : String = ""
+    
+    
+    
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
             VStack(alignment: .leading) {
-                Text("Username:")
-                TextField("Username", text : $newUsername)
-                    .disableAutocorrection(true)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color.white)
-                                    .shadow(radius: 2, y:2)
-                    )
-                    .padding()
-                Text("Password:")
-                SecureField("Password", text : $newPassword)
-                    .disableAutocorrection(true)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color.white)
-                                    .shadow(radius: 2, y:2)
-                    )
-                    .padding()
-                Text("Confirm Password:")
-                SecureField("Confirm Password", text : $confirmedPassword)
-                    .disableAutocorrection(true)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color.white)
-                                    .shadow(radius: 2, y:2)
-                    )
-                    .padding()
+                CustomTextField(leadingString: "Username:", caption: "Username", text: newUsername)
+                CustomTextField(leadingString: "Password:", caption: "Password", text: newPassword)
+                CustomTextField(leadingString: "Confirm Password:", caption: "Confirm", text: confirmedPassword)
                 Spacer()
+                
                 if newPassword == confirmedPassword && confirmedPassword != "" && newPassword != "" {
                     if confirmedPassword.count < 10 {
                         Text("The password is not long enough.")
@@ -84,7 +65,6 @@ struct New_User: View {
                             .padding()
                     })
             }
-            .padding()
         }
         .navigationBarTitle("")
         .navigationBarHidden(true)
