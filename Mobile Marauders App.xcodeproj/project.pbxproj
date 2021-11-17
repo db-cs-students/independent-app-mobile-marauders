@@ -11,6 +11,7 @@
 		3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D74A95D273ED4580087EA4B /* ContentView.swift */; };
 		3D74A960273ED45B0087EA4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D74A95F273ED45B0087EA4B /* Assets.xcassets */; };
 		3D74A963273ED45B0087EA4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D74A962273ED45B0087EA4B /* Preview Assets.xcassets */; };
+		3DAC215A2745732400996012 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC21592745732400996012 /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		3D74A95F273ED45B0087EA4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D74A962273ED45B0087EA4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D74A964273ED45B0087EA4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DAC21592745732400996012 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,6 @@
 			children = (
 				3D74A95B273ED4580087EA4B /* Mobile_Marauders_AppApp.swift */,
 				3D74A96D273ED5CF0087EA4B /* Views */,
-				3D74A96C273ED5C70087EA4B /* Helpers */,
 				3D74A95F273ED45B0087EA4B /* Assets.xcassets */,
 				3D74A964273ED45B0087EA4B /* Info.plist */,
 				3D74A961273ED45B0087EA4B /* Preview Content */,
@@ -70,17 +71,11 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		3D74A96C273ED5C70087EA4B /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		3D74A96D273ED5CF0087EA4B /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				3D74A95D273ED4580087EA4B /* ContentView.swift */,
+				3DAC21592745732400996012 /* TabBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DAC215A2745732400996012 /* TabBar.swift in Sources */,
 				3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */,
 				3D74A95C273ED4580087EA4B /* Mobile_Marauders_AppApp.swift in Sources */,
 			);
