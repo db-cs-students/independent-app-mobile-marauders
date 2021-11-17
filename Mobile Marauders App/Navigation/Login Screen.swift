@@ -9,8 +9,8 @@ import SwiftUI
 
 
 struct Login_Screen: View {
-    @State var username : String = ""
-    @State var password : String = ""
+    @State var username : String = "superfinanceman57"
+    @State var password : String = "******************"
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
