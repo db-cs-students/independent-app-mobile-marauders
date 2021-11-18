@@ -23,14 +23,17 @@ struct TabBar: View {
                     Image(systemName: "creditcard.fill")
                     Text("Payments").font(.system(size: 14))
                 }
+                .padding(.trailing)
                 VStack {
                     Image(systemName: "book.fill")
                     Text("Overview").font(.system(size: 14))
                 }
+                .padding([.top, .bottom, .trailing])
                 VStack {
                     Image(systemName: "lightbulb")
                     Text("Advice").font(.system(size: 14))
                 }
+                .padding(.vertical)
             }
         }    }
 }
