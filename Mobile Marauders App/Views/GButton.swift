@@ -11,26 +11,22 @@ struct SwiftUIView: View {
     @State private var nav = false
     var body: some View {
             NavigationView {
-                    Button(action: {nav.toggle()}) {
+                NavigationLink(
+                    destination: ContentView(),
+                    label: {
                         ZStack {
-                            Color.init(red: 255.0 / 255.0, green: 174.0 / 255.0, blue: 174.0 / 255.0)
+                            Color.init(red: 255/255, green: 174/255, blue: 174/255)
+                                .frame(width: 270, height: 50)
+                                .cornerRadius(50.0)
+                                .shadow(radius: 8)
                             Text("Button")
-                                .font(.title)
+                                .font(.title2)
                                 .foregroundColor(Color.black)
-                        }
-                    }
-                    .frame(width: 270, height: 50)
-                    .cornerRadius(50.0)
-                    .shadow(radius: 8)
-            
-                if nav {
-                    NavigationLink(destination: Text("Second View")) {
-                    Text("Navigation")
+                            }
+                        })
                     }
                 }
             }
-        }
-    }
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         SwiftUIView()
