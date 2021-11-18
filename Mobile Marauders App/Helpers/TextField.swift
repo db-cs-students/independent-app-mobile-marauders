@@ -29,8 +29,32 @@ struct CustomTextField: View {
     }
 }
 
+struct CustomSecureField: View {
+    let leadingString : String
+    let caption : String
+    @State var text : String
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(leadingString)
+            HStack {
+                SecureField(caption, text : $text)
+                    .padding()
+                    .disableAutocorrection(true)
+                    .background(RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.white)
+                                    .shadow(radius: 2, y:2)
+                    )
+            }
+        }
+        .padding()
+    }
+}
+
 struct TextField_Previews: PreviewProvider {
     static var previews: some View {
+        VStack {
         CustomTextField(leadingString: "You are:", caption: "dumbstupid", text: "Dumb")
+        CustomSecureField(leadingString: "You are:", caption: "dumbstupid", text: "")
     }
+}
 }
