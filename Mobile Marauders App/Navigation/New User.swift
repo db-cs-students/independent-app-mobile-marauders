@@ -10,14 +10,32 @@ import SwiftUI
 
 struct New_User: View {
     @State var newUsername : String = ""
-    @State var newPassword : String = ""
-    @State var confirmedPassword : String = ""
+    @State var newPassword : String = "tencharacters"
+    @State var confirmedPassword : String = "tencharacters"
     
     
-    func validatePasswords() -> Bool {
-        guard newPassword == confirmedPassword && confirmedPassword != "" && confirmedPassword.count > 10 else {return false}
-        
-        return true
+    @ViewBuilder func validatePasswords() -> some View {
+        if newPassword == confirmedPassword && confirmedPassword != "" && confirmedPassword.count > 10 {
+            
+            VStack {
+                Text("The passwords are equal and secure.")
+                    .padding()
+                    .padding(.bottom, 40)
+                NavigationLink(
+                    destination: Questions(),
+                    label: {
+                        Text("Questions")
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .padding()
+                            .foregroundColor(.black)
+                            .background(RoundedRectangle(cornerRadius: 10)
+                                            .fill(Color("Pink"))
+                                            .shadow(radius: 2, y:2)
+                            )
+                            .padding()
+                    })
+            }
+        }
     }
     
     var body: some View {
@@ -40,27 +58,8 @@ struct New_User: View {
                             )
                             .padding()
                     })
-                if validatePasswords() {
-                    VStack {
-                        Text("The passwords are equal and secure.")
-                            .padding()
-                            .padding(.bottom, 40)
-                        NavigationLink(
-                            destination: Questions(),
-                            label: {
-                                Text("Questions")
-                                    .frame(minWidth: 0, maxWidth: .infinity)
-                                    .padding()
-                                    .foregroundColor(.black)
-                                    .background(RoundedRectangle(cornerRadius: 10)
-                                                    .fill(Color("Pink"))
-                                                    .shadow(radius: 2, y:2)
-                                    )
-                                    .padding()
-                            })
-                    }
-                }
                 Spacer()
+                validatePasswords()
             }
         }
         .navigationBarTitle("")

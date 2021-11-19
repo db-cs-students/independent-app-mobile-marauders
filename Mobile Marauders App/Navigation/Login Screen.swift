@@ -12,57 +12,55 @@ struct Login_Screen: View {
     @State var username : String = "superfinanceman57"
     @State var password : String = ""
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color("Background").ignoresSafeArea()
-                VStack {
-                    Image("Dollar")
-                        .resizable()
-                        .clipShape(Circle())
-                        .overlay(Circle().stroke(Color.black, lineWidth: 1))
-                        .frame(width: 200, height: 200)
-                        .padding(.top, 40)
-                        .padding(.bottom, 40)
-                    
-                    CustomTextField(leadingString: "Username:", caption: "Username", text: username)
-                    CustomTextField(leadingString: "Password:", caption: "Password", text: password)
-                    
-                    Spacer()
-                    
-                    HStack {
-                        Button(action: {
-                            
-                        }, label: {
-                            Text("Log In")
-                                .frame(minWidth: 0, maxWidth: .infinity)
-                                .padding()
-                                .foregroundColor(.black)
-                        })
-                        .background(RoundedRectangle(cornerRadius: 10)
-                                        .fill(Color.white)
-                                        .shadow(radius: 2, y:2)
-                        )
-                        .padding()
-                        NavigationLink(destination: New_User()){
-                            Text("Create Account")
-                                .frame(minWidth: 0, maxWidth: .infinity)
-                                .padding()
-                                .foregroundColor(.black)
-                                .background(RoundedRectangle(cornerRadius: 10)
-                                                .fill(Color("Pink"))
-                                                .shadow(radius: 2, y:2)
-                                )
-                        }
-                        .padding()
+        ZStack {
+            Color("Background").ignoresSafeArea()
+            VStack {
+                Image("Dollar")
+                    .resizable()
+                    .clipShape(Circle())
+                    .overlay(Circle().stroke(Color.black, lineWidth: 1))
+                    .frame(width: 200, height: 200)
+                    .padding(.top, 40)
+                    .padding(.bottom, 40)
+                
+                CustomTextField(leadingString: "Username:", caption: "Username", text: username)
+                CustomTextField(leadingString: "Password:", caption: "Password", text: password)
+                
+                Spacer()
+                
+                HStack {
+                    Button(action: {
                         
+                    }, label: {
+                        Text("Log In")
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .padding()
+                            .foregroundColor(.black)
+                    })
+                    .background(RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.white)
+                                    .shadow(radius: 2, y:2)
+                    )
+                    .padding()
+                    NavigationLink(destination: New_User()){
+                        Text("Create Account")
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .padding()
+                            .foregroundColor(.black)
+                            .background(RoundedRectangle(cornerRadius: 10)
+                                            .fill(Color("Pink"))
+                                            .shadow(radius: 2, y:2)
+                            )
                     }
-                    .padding(.bottom, 100)
+                    .padding()
+                    
                 }
+                .padding(.bottom, 100)
             }
-            .navigationBarTitle("")
-            .navigationBarHidden(true)
-            .navigationBarTitleDisplayMode(.inline)
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
