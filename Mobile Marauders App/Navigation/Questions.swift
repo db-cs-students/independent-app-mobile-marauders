@@ -21,9 +21,24 @@ struct Questions: View {
                 CustomTextField(leadingString: "Weekly Income:", caption: "Income ($)", text: weeklyIncome)
                 CustomTextField(leadingString: "Other Expenses:", caption: "Expenses ($)", text: userExpenses)
                 Spacer()
+                NavigationLink(
+                    destination: New_User(),
+                    label: {
+                        Text("Back")
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .padding()
+                            .foregroundColor(.black)
+                            .background(RoundedRectangle(cornerRadius: 10)
+                                            .fill(Color.white)
+                                            .shadow(radius: 2, y:2)
+                            )
+                            .padding()
+                    })
             }
-            .navigationBarTitleDisplayMode(.inline)
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

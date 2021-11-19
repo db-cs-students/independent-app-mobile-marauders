@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D16E3A827480EC20035D0E1 /* EditBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D16E3A727480EC20035D0E1 /* EditBudget.swift */; };
 		3D4EEF892744237B006E7E89 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EEF882744237B006E7E89 /* Questions.swift */; };
 		3D5ED7BB27457426009F5043 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED7BA27457426009F5043 /* TextField.swift */; };
 		3D732337273ED86600B69F64 /* Login Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D732336273ED86600B69F64 /* Login Screen.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D16E3A727480EC20035D0E1 /* EditBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudget.swift; sourceTree = "<group>"; };
 		3D4EEF882744237B006E7E89 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		3D5ED7BA27457426009F5043 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		3D732336273ED86600B69F64 /* Login Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login Screen.swift"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				3D732336273ED86600B69F64 /* Login Screen.swift */,
 				3DF328B32742D48C0092B446 /* New User.swift */,
 				3D4EEF882744237B006E7E89 /* Questions.swift */,
+				3D16E3A727480EC20035D0E1 /* EditBudget.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				3D5ED7BB27457426009F5043 /* TextField.swift in Sources */,
 				3D4EEF892744237B006E7E89 /* Questions.swift in Sources */,
 				3D732337273ED86600B69F64 /* Login Screen.swift in Sources */,
+				3D16E3A827480EC20035D0E1 /* EditBudget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,8 +10,8 @@ import SwiftUI
 
 struct New_User: View {
     @State var newUsername : String = ""
-    @State var newPassword : String = "tencharacters"
-    @State var confirmedPassword : String = "tencharacters"
+    @State var newPassword : String = ""
+    @State var confirmedPassword : String = ""
     
     
     @ViewBuilder func validatePasswords() -> some View {
@@ -35,13 +35,15 @@ struct New_User: View {
                             .padding()
                     })
             }
+        } else {
+            Text("Validating...")
         }
     }
     
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
-            VStack(alignment: .leading) {
+            VStack {
                 CustomTextField(leadingString: "Username:", caption: "Username", text: newUsername)
                 CustomSecureField(leadingString: "Password:", caption: "Password", text: newPassword)
                 CustomSecureField(leadingString: "Confirm Password:", caption: "Confirm", text: confirmedPassword)

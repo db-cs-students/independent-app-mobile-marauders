@@ -9,12 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            ZStack {
-                    Color("Background").ignoresSafeArea()
-                    Login_Screen()
-            }
-        }
+        Login_Screen()
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
+            .navigationBarTitleDisplayMode(.inline)
     }
 }
 
