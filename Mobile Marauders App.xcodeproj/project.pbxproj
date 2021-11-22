@@ -11,6 +11,7 @@
 		3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D74A95D273ED4580087EA4B /* ContentView.swift */; };
 		3D74A960273ED45B0087EA4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D74A95F273ED45B0087EA4B /* Assets.xcassets */; };
 		3D74A963273ED45B0087EA4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D74A962273ED45B0087EA4B /* Preview Assets.xcassets */; };
+		3D9C72042746BF430020EC54 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C72032746BF430020EC54 /* TabView.swift */; };
 		3DAC215A2745732400996012 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC21592745732400996012 /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,7 @@
 		3D74A95F273ED45B0087EA4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D74A962273ED45B0087EA4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D74A964273ED45B0087EA4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D9C72032746BF430020EC54 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		3DAC21592745732400996012 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +78,7 @@
 			children = (
 				3D74A95D273ED4580087EA4B /* ContentView.swift */,
 				3DAC21592745732400996012 /* TabBar.swift */,
+				3D9C72032746BF430020EC54 /* TabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			files = (
 				3DAC215A2745732400996012 /* TabBar.swift in Sources */,
 				3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */,
+				3D9C72042746BF430020EC54 /* TabView.swift in Sources */,
 				3D74A95C273ED4580087EA4B /* Mobile_Marauders_AppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

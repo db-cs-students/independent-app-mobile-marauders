@@ -14,9 +14,12 @@ struct TabBar: View {
                 .frame(width: 320, height: 60)
                 .foregroundColor(Color("Pink"))
             HStack {
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                
                 VStack{
                     Image(systemName: "banknote.fill")
                     Text("Budgets").font(.system(size: 14))
+                }
                 }
                 .padding(.trailing)
                 VStack {
