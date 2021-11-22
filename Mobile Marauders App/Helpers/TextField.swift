@@ -54,8 +54,8 @@ struct CustomSecureField: View {
 struct TextField_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            CustomTextField(title: "You are:", preview: "dumbstupid", text: .constant("Dumb"))
-            CustomSecureField(title: "You are:", preview: "dumbstupid", text: .constant(""))
+            CustomTextField(title: "You are:", preview: "smart", text: .constant("dumb!"))
+            CustomSecureField(title: "You are:", preview: "dumb!", text: .constant(""))
     }
 }
 }
