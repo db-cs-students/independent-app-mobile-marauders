@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var pet: String = "Cat"
+    @State var food: String = "Apple"
+    let pets = ["cat", "dog"]
+    let foods = ["apple", "banana"]
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            
+            Text("My favorite food is \(food) and my pet is \(pet)")
+                .overlay(OverlayView(selection: $pet, items: pets))
+        }
     }
 }
 

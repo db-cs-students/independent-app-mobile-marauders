@@ -7,39 +7,24 @@
 
 import SwiftUI
 
+// OverlayView has parameters it will require a bound "selection:" as a default selection of data and an array of data as "items:"
 struct OverlayView: View {
-    @State var showOverlay = false
+    @Binding var selection: String
+    let items: [String]
+    
     var body: some View {
-        Button("Trigger action") {
-            //the trigger must set the showOverlay to true
-            showOverlay = true
-        }
-            .popover(isPresented: $showOverlay) {
-                Picker(selection: .constant(0), label: Text("Picker")) {
-                    Text("").tag(0)
-                    Button("Item1") {
-                        //any item actions go here
-                        
-                        showOverlay = false
-                    }.padding(.vertical, 5.0)
-                    .tag(1)
-                    Button("Item2") {
-                        
-                        showOverlay = false
-                    }.padding(.vertical, 5.0)
-                    .tag(2)
-                    Button("Item3") {
-                        
-                        showOverlay = false
-                    }.padding(.vertical, 5.0)
-                    .tag(3)
+        //to overlay this use the (.overlay(View)) with the overlayView as it's view(with it's parameters) in the spot you would like to overlay it in
+        
+            Picker(selection: $selection, label: Text("Picker")) {
+                ForEach(items,id: \.self){
+                    Text($0)
+                }
             }
-        }
     }
 }
 
 struct OverlayView_Previews: PreviewProvider {
     static var previews: some View {
-        OverlayView()
+        OverlayView(selection: .constant("Item 1"), items: ["item1", "item2", "item3"])
     }
 }
