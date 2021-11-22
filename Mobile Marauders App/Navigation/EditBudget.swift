@@ -26,8 +26,8 @@ struct EditBudget: View {
         ZStack {
             Color("Background").ignoresSafeArea()
             VStack {
-                CustomTextField(leadingString: "Name:", caption: "Budget Name", text: budgetName)
-                CustomTextField(leadingString: "Amount:", caption: "Budget Amount", text: budgetAmount)
+                CustomTextField(title: "Name:", preview: "Budget Name", text: $budgetName)
+                CustomTextField(title: "Amount:", preview: "Budget Amount", text: $budgetAmount)
                     .padding(.top, 30)
                 
                 VStack(alignment: .leading) {
@@ -40,7 +40,6 @@ struct EditBudget: View {
                         Text("Monthly").tag(Repeat.Monthly)
                         Text("Yearly").tag(Repeat.Yearly)
                     }
-                    .offset(x: 0,y: -40)
                 }
                 Spacer()
                 

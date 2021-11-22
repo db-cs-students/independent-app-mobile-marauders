@@ -23,8 +23,8 @@ struct Login_Screen: View {
                     .padding(.top, 40)
                     .padding(.bottom, 40)
                 
-                CustomTextField(leadingString: "Username:", caption: "Username", text: username)
-                CustomTextField(leadingString: "Password:", caption: "Password", text: password)
+                CustomTextField(title: "Username:", preview: "Username", text: $username)
+                CustomTextField(title: "Password:", preview: "Password", text: $password)
                 
                 Spacer()
                 

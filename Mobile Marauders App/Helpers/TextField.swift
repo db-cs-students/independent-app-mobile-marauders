@@ -7,37 +7,38 @@
 
 import SwiftUI
 
-
+// Creates a VStack with text displaying the title above the text field (constant title), and a text field below with preview data (constant preview) and text (binding text).
 struct CustomTextField: View {
-    let leadingString : String
-    let caption : String
-    @State var text : String
+    let title : String
+    let preview : String
+    @Binding var text : String
     var body: some View {
         VStack(alignment: .leading) {
-            Text(leadingString)
+            Text(title)
             HStack {
-                TextField(caption, text : $text)
+                TextField(preview, text : $text)
                     .padding()
                     .disableAutocorrection(true)
                     .background(RoundedRectangle(cornerRadius: 10)
                                     .fill(Color.white)
                                     .shadow(radius: 2, y:2)
                     )
+                   
             }
         }
         .padding()
     }
 }
-
+// Creates a VStack with text displaying the title above the secure field (constant title), and a secure field below with preview data (constant preview) and text (binding text).
 struct CustomSecureField: View {
-    let leadingString : String
-    let caption : String
-    @State var text : String
+    let title : String
+    let preview : String
+    @Binding var text : String
     var body: some View {
         VStack(alignment: .leading) {
-            Text(leadingString)
+            Text(title)
             HStack {
-                SecureField(caption, text : $text)
+                SecureField(preview, text : $text)
                     .padding()
                     .disableAutocorrection(true)
                     .background(RoundedRectangle(cornerRadius: 10)
@@ -53,8 +54,8 @@ struct CustomSecureField: View {
 struct TextField_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-        CustomTextField(leadingString: "You are:", caption: "dumbstupid", text: "Dumb")
-        CustomSecureField(leadingString: "You are:", caption: "dumbstupid", text: "")
+            CustomTextField(title: "You are:", preview: "dumbstupid", text: .constant("Dumb"))
+            CustomSecureField(title: "You are:", preview: "dumbstupid", text: .constant(""))
     }
 }
 }
