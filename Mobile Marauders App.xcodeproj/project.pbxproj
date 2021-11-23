@@ -16,6 +16,7 @@
 		3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D74A95D273ED4580087EA4B /* ContentView.swift */; };
 		3D74A960273ED45B0087EA4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D74A95F273ED45B0087EA4B /* Assets.xcassets */; };
 		3D74A963273ED45B0087EA4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D74A962273ED45B0087EA4B /* Preview Assets.xcassets */; };
+		3DE28E11274D60DF005E229C /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE28E10274D60DF005E229C /* Overview.swift */; };
 		3DF328B42742D48C0092B446 /* New User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF328B32742D48C0092B446 /* New User.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		3D74A95F273ED45B0087EA4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D74A962273ED45B0087EA4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D74A964273ED45B0087EA4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DE28E10274D60DF005E229C /* Overview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overview.swift; sourceTree = "<group>"; };
 		3DF328B32742D48C0092B446 /* New User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "New User.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				3D732336273ED86600B69F64 /* Login Screen.swift */,
 				3DF328B32742D48C0092B446 /* New User.swift */,
 				3D4EEF882744237B006E7E89 /* Questions.swift */,
+				3DE28E10274D60DF005E229C /* Overview.swift */,
 				3D16E3A727480EC20035D0E1 /* EditBudget.swift */,
 			);
 			path = Navigation;
@@ -183,6 +186,7 @@
 				3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */,
 				3D647B73274C00C0006B32D6 /* PieChart.swift in Sources */,
 				3D74A95C273ED4580087EA4B /* Mobile_Marauders_AppApp.swift in Sources */,
+				3DE28E11274D60DF005E229C /* Overview.swift in Sources */,
 				3DF328B42742D48C0092B446 /* New User.swift in Sources */,
 				3D5ED7BB27457426009F5043 /* TextField.swift in Sources */,
 				3D4EEF892744237B006E7E89 /* Questions.swift in Sources */,
