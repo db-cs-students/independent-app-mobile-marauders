@@ -54,7 +54,6 @@
 			children = (
 				3D74A95B273ED4580087EA4B /* Mobile_Marauders_AppApp.swift */,
 				3D74A96D273ED5CF0087EA4B /* Views */,
-				3D74A96C273ED5C70087EA4B /* Helpers */,
 				3D74A95F273ED45B0087EA4B /* Assets.xcassets */,
 				3D74A964273ED45B0087EA4B /* Info.plist */,
 				3D74A961273ED45B0087EA4B /* Preview Content */,
@@ -68,13 +67,6 @@
 				3D74A962273ED45B0087EA4B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		3D74A96C273ED5C70087EA4B /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		3D74A96D273ED5CF0087EA4B /* Views */ = {
