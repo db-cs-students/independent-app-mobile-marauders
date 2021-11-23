@@ -53,11 +53,38 @@ struct PieSliceView : View {
     }
 }
 
+struct TableRows: View {
+    var colors: [Color]
+    var names: [String]
+    var values: [String]
+    var percents: [String]
+    
+    var body: some View {
+        VStack{
+            ForEach(0..<self.values.count){ i in
+                HStack {
+                    RoundedRectangle(cornerRadius: 5.0)
+                        .fill(self.colors[i])
+                        .frame(width: 20, height: 20)
+                    Text(self.names[i])
+                    Spacer()
+                    VStack(alignment: .trailing) {
+                        Text(self.values[i])
+                        Text(self.percents[i])
+                            .foregroundColor(Color.gray)
+                    }
+                }
+            }
+        }
+    }
+}
+
 struct PieChart: View {
     public let values : [Double]
     public let colors : [Color]
-    
+    public let names : [String]
     public var backgroundColor: Color
+    public let innerRadiusFraction: CGFloat
     
     var slices : [PieSliceData] {
         let sum = values.reduce(0, +)
@@ -74,20 +101,38 @@ struct PieChart: View {
     
     var body: some View {
         GeometryReader { geometry in
-            ZStack{
-                ForEach(0..<self.values.count){ i in
-                    PieSliceView(pieSliceData: self.slices[i])
+            VStack {
+                ZStack{
+                    ForEach(0..<self.values.count){ i in
+                        PieSliceView(pieSliceData: self.slices[i])
+                    }
+                    .padding()
+                    .frame(width: geometry.size.width, height: geometry.size.width)
+                    Circle()
+                        .fill(self.backgroundColor)
+                        .frame(width: geometry.size.width * innerRadiusFraction, height: geometry.size.height * innerRadiusFraction)
+                    
+                    VStack {
+                        Text("Total")
+                            .font(.title)
+                            .foregroundColor(.black)
+                        Text("$\(String(values.reduce(0,+)))")
+                            .font(.title)
+                            .foregroundColor(.gray)
+                    }
                 }
-                .frame(width: geometry.size.width, height: geometry.size.width)
+                TableRows(colors: self.colors, names: self.names, values: self.values.map { String($0) }, percents: self.values.map { String(format: "%.0f%%", $0 * 100 / self.values.reduce(0, +)) })
+                    .padding()
+                Spacer()
             }
             .background(self.backgroundColor)
-            .foregroundColor(Color.white)
+            .foregroundColor(Color.black)
         }
     }
 }
 
 struct PieChart_Previews: PreviewProvider {
     static var previews: some View {
-        PieChart(values: [1300, 500, 300], colors: [Color.blue, Color.green, Color.orange], backgroundColor: Color(red: 21 / 255, green: 24 / 255, blue: 30 / 255, opacity: 1.0))
+        PieChart(values: [145, 500, 300], colors: [Color("Pink"), Color("Red"), Color(.red)], names: ["House", "Bills", "Subscriptions"], backgroundColor: Color("Background"), innerRadiusFraction: 0.54)
     }
 }
