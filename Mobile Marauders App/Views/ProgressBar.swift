@@ -23,11 +23,12 @@ struct ProgressBar: View {
                 .frame(width: 250, height: 50)
                 .shadow(radius: 3, x: 0, y: 3)
                 .foregroundColor(Color("White"))
-            ZStack(){
+            ZStack(alignment: .leading) {
                  RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/15.0/*@END_MENU_TOKEN@*/)
                 .frame(width: percentage * 250, height: 50, alignment: .leading)
                 .foregroundColor(Color("Pink"))
-                Text("\(percentage) % ")
+                Text("\(percentage, specifier: "%.2f") % ")
+                    .padding()
             }
         }
     }
@@ -35,6 +36,6 @@ struct ProgressBar: View {
 
 struct ProgressBar_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressBar(total: 300, amount: 100)
+        ProgressBar(total: 300, amount: 10)
     }
 }
