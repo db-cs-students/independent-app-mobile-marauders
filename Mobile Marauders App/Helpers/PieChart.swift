@@ -42,12 +42,13 @@ struct PieSliceView : View {
                 .fill(pieSliceData.color)
                 
                 Text(pieSliceData.text)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color("PiePercentage"))
                     .position(
                         x: geometry.size.width * 0.5 * CGFloat(1.0 + 0.78 * cos(self.midRadians)),
                         y: geometry.size.height * 0.5 * CGFloat(1.0 - 0.78 * sin(self.midRadians))
                     )
             }
+            .shadow(radius: 2.0)
         }
         .aspectRatio(1, contentMode: .fit)
     }
@@ -125,7 +126,6 @@ struct PieChart: View {
                     .padding()
                 Spacer()
             }
-            .background(self.backgroundColor)
             .foregroundColor(Color.black)
         }
     }
@@ -133,6 +133,6 @@ struct PieChart: View {
 
 struct PieChart_Previews: PreviewProvider {
     static var previews: some View {
-        PieChart(values: [145, 500, 300], colors: [Color("Pink"), Color("Red"), Color(.red)], names: ["House", "Bills", "Subscriptions"], backgroundColor: Color("Background"), innerRadiusFraction: 0.54)
+        PieChart(values: [145, 500, 300, 450], colors: [Color("Pink"), Color("Red"), Color(.red), Color("Available")], names: ["House", "Bills", "Subscriptions", "Available"], backgroundColor: Color("Background"), innerRadiusFraction: 0.54)
     }
 }
