@@ -15,6 +15,7 @@ struct Overview: View {
             VStack {
                 Text("Money Available:")
                     .font(.title2)
+                    .padding(.bottom, 5)
                 Text("$\(values[0], specifier: "%.0f")")
                     .font(.title2)
                     .bold()
