@@ -21,19 +21,34 @@ struct Questions: View {
                 CustomTextField(title: "Weekly Income:", preview: "Income ($)", text: $weeklyIncome)
                 CustomTextField(title: "Other Expenses:", preview: "Expenses ($)", text: $userExpenses)
                 Spacer()
-                NavigationLink(
-                    destination: New_User(),
-                    label: {
-                        Text("Back")
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                            .padding()
-                            .foregroundColor(.black)
-                            .background(RoundedRectangle(cornerRadius: 10)
-                                            .fill(Color.white)
-                                            .shadow(radius: 2, y:2)
-                            )
-                            .padding()
+                HStack {
+                    NavigationLink(
+                        destination: New_User(),
+                        label: {
+                            Text("Back")
+                                .frame(minWidth: 0, maxWidth: .infinity)
+                                .padding()
+                                .foregroundColor(.black)
+                                .background(RoundedRectangle(cornerRadius: 10)
+                                                .fill(Color.white)
+                                                .shadow(radius: 2, y:2)
+                                )
+                                .padding()
                     })
+                    NavigationLink(
+                        destination: Overview(),
+                        label: {
+                            Text("Continue")
+                                .frame(minWidth: 0, maxWidth: .infinity)
+                                .padding()
+                                .foregroundColor(.black)
+                                .background(RoundedRectangle(cornerRadius: 10)
+                                                .fill(Color("Pink"))
+                                                .shadow(radius: 2, y:2)
+                                )
+                                .padding()
+                    })
+                }
             }
         }
         .navigationBarTitle("")

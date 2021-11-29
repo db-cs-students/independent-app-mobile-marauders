@@ -11,8 +11,11 @@ struct Overview: View {
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
-            PieChart(values: [150, 400, 450, 200], colors: [Color("Available"), Color("Red"), Color(.red), Color("Pink")], names: ["Available", "Bills", "House", "Subscriptions"], backgroundColor: Color("Background"), innerRadiusFraction: 0.54)
+            PieChart(values: [300, 400, 450, 200], colors: [Color("PiePercentage"), Color("Red"), Color(.red), Color("Pink")], names: ["Available", "Bills", "House", "Subscriptions"], backgroundColor: Color("Background"), innerRadiusFraction: 0.52)
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

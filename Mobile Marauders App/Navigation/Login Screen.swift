@@ -29,18 +29,16 @@ struct Login_Screen: View {
                 Spacer()
                 
                 HStack {
-                    Button(action: {
-                        
-                    }, label: {
+                    NavigationLink(destination: Overview()){
                         Text("Log In")
                             .frame(minWidth: 0, maxWidth: .infinity)
                             .padding()
                             .foregroundColor(.black)
-                    })
-                    .background(RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color.white)
-                                    .shadow(radius: 2, y:2)
-                    )
+                            .background(RoundedRectangle(cornerRadius: 10)
+                                            .fill(Color.white)
+                                            .shadow(radius: 2, y:2)
+                            )
+                    }
                     .padding()
                     NavigationLink(destination: New_User()){
                         Text("Create Account")

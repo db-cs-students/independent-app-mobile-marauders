@@ -41,12 +41,12 @@ struct PieSliceView : View {
                 }
                 .fill(pieSliceData.color)
                 
-                Text(pieSliceData.text)
-                    .foregroundColor(Color("PiePercentage"))
-                    .position(
-                        x: geometry.size.width * 0.5 * CGFloat(1.0 + 0.78 * cos(self.midRadians)),
-                        y: geometry.size.height * 0.5 * CGFloat(1.0 - 0.78 * sin(self.midRadians))
-                    )
+//                Text(pieSliceData.text)
+//                    .foregroundColor(Color("PiePercentage"))
+//                    .position(
+//                        x: geometry.size.width * 0.5 * CGFloat(1.0 + 0.78 * cos(self.midRadians)),
+//                        y: geometry.size.height * 0.5 * CGFloat(1.0 - 0.78 * sin(self.midRadians))
+//                    )
             }
             .shadow(radius: 2.0)
         }
@@ -65,16 +65,22 @@ struct TableRows: View {
             ForEach(0..<self.values.count){ i in
                 HStack {
                     Text(self.names[i])
+                        .padding(.leading, 10)
                     Spacer()
                     VStack(alignment: .trailing) {
                         Text("$\(self.values[i])")
                         Text(self.percents[i])
                             .foregroundColor(Color.gray)
                     }
+                    .padding(.trailing, 10)
                 }
                 .padding(.bottom, 5)
             }
         }
+        .padding()
+        .background(RoundedRectangle(cornerRadius: 10)
+                        .fill(LinearGradient(gradient: Gradient(colors: [Color("Pink"), .white]), startPoint: .top, endPoint: .bottom))
+                        .shadow(radius: 2, y:2))
     }
 }
 
