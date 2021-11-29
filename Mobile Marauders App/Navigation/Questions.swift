@@ -36,7 +36,7 @@ struct Questions: View {
                                 .padding()
                     })
                     NavigationLink(
-                        destination: Overview(),
+                        destination: Overview(values: [200, 100, 200, 400]),
                         label: {
                             Text("Continue")
                                 .frame(minWidth: 0, maxWidth: .infinity)

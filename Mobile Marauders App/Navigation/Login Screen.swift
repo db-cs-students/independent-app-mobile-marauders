@@ -29,7 +29,7 @@ struct Login_Screen: View {
                 Spacer()
                 
                 HStack {
-                    NavigationLink(destination: Overview()){
+                    NavigationLink(destination: Overview(values: [100, 300, 350, 500])){
                         Text("Log In")
                             .frame(minWidth: 0, maxWidth: .infinity)
                             .padding()
