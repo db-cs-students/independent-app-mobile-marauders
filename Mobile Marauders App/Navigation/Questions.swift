@@ -16,10 +16,10 @@ struct Questions: View {
         ZStack {
             Color("Background").ignoresSafeArea()
             VStack {
-                CustomTextField(title: "Current Balance:", preview: "Balance ($)", text: $currentBalance)
-                CustomTextField(title: "Current Loans:", preview:"Loans ($)", text: $currentLoans)
-                CustomTextField(title: "Weekly Income:", preview: "Income ($)", text: $weeklyIncome)
-                CustomTextField(title: "Other Expenses:", preview: "Expenses ($)", text: $userExpenses)
+                CustomNumberTextField(title: "Current Balance:", preview: "Balance ($)", text: $currentBalance)
+                CustomNumberTextField(title: "Current Loans:", preview:"Loans ($)", text: $currentLoans)
+                CustomNumberTextField(title: "Weekly Income:", preview: "Income ($)", text: $weeklyIncome)
+                CustomNumberTextField(title: "Other Expenses:", preview: "Expenses ($)", text: $userExpenses)
                 Spacer()
                 HStack {
                     NavigationLink(

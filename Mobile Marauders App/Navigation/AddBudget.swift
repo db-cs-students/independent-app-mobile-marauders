@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddBudget: View {
     @State var newBudgetName : String = "New Budget"
-    @State var newBudgetAmount : String = "234"
+    @State var newBudgetAmount : String = "2345"
     @State var newRepeatDate = Repeat.Daily
     
     enum Repeat : String, CaseIterable, Identifiable {
@@ -27,7 +27,7 @@ struct AddBudget: View {
             Color("Background").ignoresSafeArea()
             VStack {
                 CustomTextField(title: "Name:", preview: "Budget Name", text: $newBudgetName)
-                CustomTextField(title: "Amount:", preview: "Budget Amount ($)", text: $newBudgetAmount)
+                CustomNumberTextField(title: "Amount:", preview: "Budget Amount ($)", text: $newBudgetAmount)
                     .padding(.top, 30)
                 
                 VStack(alignment: .leading) {

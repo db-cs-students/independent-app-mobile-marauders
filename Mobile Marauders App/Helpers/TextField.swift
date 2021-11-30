@@ -23,7 +23,7 @@ struct CustomTextField: View {
                                     .fill(Color.white)
                                     .shadow(radius: 2, y:2)
                     )
-                   
+                
             }
         }
         .padding()
@@ -50,12 +50,35 @@ struct CustomSecureField: View {
         .padding()
     }
 }
+// Creates a CustomTextField with the only exception being the input type being a number pad.
+struct CustomNumberTextField: View {
+    let title : String
+    let preview : String
+    @Binding var text : String
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(title)
+            HStack {
+                TextField(preview, text : $text)
+                    .padding()
+                    .keyboardType(.numberPad)
+                    .background(RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.white)
+                                    .shadow(radius: 2, y:2)
+                    )
+                
+            }
+        }
+        .padding()
+    }
+}
 
 struct TextField_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             CustomTextField(title: "You are:", preview: "smart", text: .constant("dumb!"))
             CustomSecureField(title: "You are:", preview: "dumb!", text: .constant(""))
+            CustomNumberTextField(title: "This time:", preview: "numbers", text: .constant(""))
+        }
     }
-}
 }

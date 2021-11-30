@@ -27,7 +27,7 @@ struct EditBudget: View {
             Color("Background").ignoresSafeArea()
             VStack {
                 CustomTextField(title: "Name:", preview: "Budget Name", text: $budgetName)
-                CustomTextField(title: "Amount:", preview: "Budget Amount ($)", text: $budgetAmount)
+                CustomNumberTextField(title: "Amount:", preview: "Budget Amount ($)", text: $budgetAmount)
                     .padding(.top, 30)
                 
                 VStack(alignment: .leading) {
