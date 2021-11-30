@@ -17,8 +17,11 @@ struct ContentView: View {
         VStack {
             
             Text("My favorite food is \(food) and my pet is \(pet)")
-                .overlay(OverlayView(selection: $pet, items: pets))
+                .overlay(OverlayView(selection: $pet, items: pets), alignment: .top)
+                
+                
         }
+        
     }
 }
 

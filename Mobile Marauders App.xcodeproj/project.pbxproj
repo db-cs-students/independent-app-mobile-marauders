@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D4A161127553DF900B7FDE8 /* AdviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A161027553DF900B7FDE8 /* AdviceView.swift */; };
 		3D74A95C273ED4580087EA4B /* Mobile_Marauders_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D74A95B273ED4580087EA4B /* Mobile_Marauders_AppApp.swift */; };
 		3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D74A95D273ED4580087EA4B /* ContentView.swift */; };
 		3D74A960273ED45B0087EA4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D74A95F273ED45B0087EA4B /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D4A161027553DF900B7FDE8 /* AdviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceView.swift; sourceTree = "<group>"; };
 		3D74A958273ED4580087EA4B /* Mobile Marauders App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Marauders App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D74A95B273ED4580087EA4B /* Mobile_Marauders_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Marauders_AppApp.swift; sourceTree = "<group>"; };
 		3D74A95D273ED4580087EA4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				3D74A95D273ED4580087EA4B /* ContentView.swift */,
 				3DAB90A0273EDA6900C0DF38 /* GButton.swift */,
 				3DB3F53E2746BD87004DA4BE /* OverlayView.swift */,
+				3D4A161027553DF900B7FDE8 /* AdviceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D4A161127553DF900B7FDE8 /* AdviceView.swift in Sources */,
 				3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */,
 				3DB3F53F2746BD87004DA4BE /* OverlayView.swift in Sources */,
 				3D74A95C273ED4580087EA4B /* Mobile_Marauders_AppApp.swift in Sources */,
