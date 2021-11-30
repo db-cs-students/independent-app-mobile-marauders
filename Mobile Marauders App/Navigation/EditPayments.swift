@@ -49,7 +49,7 @@ struct EditPayments: View {
                         })
                     }
                     .padding()
-                    TextField(budgetName1, text : $budgetText1)
+                    TextField(budgetName2, text : $budgetText1)
                         .padding()
                         .keyboardType(.numberPad)
                         .background(RoundedRectangle(cornerRadius: 10)
@@ -69,7 +69,7 @@ struct EditPayments: View {
                         })
                     }
                     .padding()
-                    TextField(budgetName1, text : $budgetText1)
+                    TextField(budgetName3, text : $budgetText1)
                         .padding()
                         .keyboardType(.numberPad)
                         .background(RoundedRectangle(cornerRadius: 10)
@@ -79,7 +79,19 @@ struct EditPayments: View {
                         .padding()
                 }
                 Spacer()
-                
+                Button(
+                    action: {},
+                    label: {
+                        Text("Add New Payment")
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .padding()
+                            .foregroundColor(.black)
+                            .background(RoundedRectangle(cornerRadius: 10)
+                                            .fill(Color("Pink"))
+                                            .shadow(radius: 2, y:2)
+                            )
+                            .padding()
+                })
             }
         }
     }
