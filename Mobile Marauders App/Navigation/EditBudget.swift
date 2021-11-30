@@ -10,7 +10,7 @@ import SwiftUI
 struct EditBudget: View {
     @State var budgetName : String = ""
     @State var budgetAmount : String = ""
-    @State var selectedRepeat = Repeat.Weekly
+    @State var repeatDate = Repeat.Weekly
     
     enum Repeat : String, CaseIterable, Identifiable {
         case Daily
@@ -31,9 +31,9 @@ struct EditBudget: View {
                     .padding(.top, 30)
                 
                 VStack(alignment: .leading) {
-                    Text("Repeat: \(selectedRepeat.id)")
+                    Text("Repeat: \(repeatDate.id)")
                         .padding()
-                    Picker("Repeat", selection: $selectedRepeat) {
+                    Picker("Repeat", selection: $repeatDate) {
                         Text("Daily").tag(Repeat.Daily)
                         Text("Weekly").tag(Repeat.Weekly)
                         Text("Biweekly").tag(Repeat.Biweekly)
