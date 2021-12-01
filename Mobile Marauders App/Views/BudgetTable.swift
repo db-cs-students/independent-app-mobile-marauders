@@ -26,10 +26,10 @@ private var budgets = [
 ]
 
 struct BudgetTable: View {
+    var budget = Budget
     var body: some View {
-        Table(budgets)  {
-            TableColumn("Given Name", value: \.givenName)
-                    TableColumn("Family Name", value: \.familyName)
+        HStack {
+            Text(verbatim: budgets.name)
         }
     }
 }
