@@ -8,10 +8,6 @@
 import SwiftUI
 
 struct EditPayments: View {
-    var budgetName1 : String
-    var budgetName2 : String
-    var budgetName3 : String
-    
     
     @Binding var budgetText1 : String
     @Binding var budgetText2 : String
@@ -24,7 +20,7 @@ struct EditPayments: View {
             VStack {
                 VStack {
                     HStack {
-                        Text(budgetName1)
+                        Text("House Payment")
                         Spacer()
                         Button(action: {}, label: {
                             Image(systemName: "delete.left")
@@ -32,7 +28,7 @@ struct EditPayments: View {
                         })
                     }
                     .padding()
-                    TextField(budgetName1, text : $budgetText1)
+                    TextField("House Payment", text : $budgetText1)
                         .padding()
                         .keyboardType(.numberPad)
                         .background(RoundedRectangle(cornerRadius: 10)
@@ -44,7 +40,7 @@ struct EditPayments: View {
                 Spacer()
                 VStack {
                     HStack {
-                        Text(budgetName2)
+                        Text("Car Payment")
                         Spacer()
                         Button(action: {}, label: {
                             Image(systemName: "delete.left")
@@ -52,7 +48,7 @@ struct EditPayments: View {
                         })
                     }
                     .padding()
-                    TextField(budgetName2, text : $budgetText1)
+                    TextField("Car Payment", text : $budgetText2)
                         .padding()
                         .keyboardType(.numberPad)
                         .background(RoundedRectangle(cornerRadius: 10)
@@ -64,7 +60,7 @@ struct EditPayments: View {
                 Spacer()
                 VStack {
                     HStack {
-                        Text(budgetName3)
+                        Text("Phone Payment")
                         Spacer()
                         Button(action: {}, label: {
                             Image(systemName: "delete.left")
@@ -72,7 +68,7 @@ struct EditPayments: View {
                         })
                     }
                     .padding()
-                    TextField(budgetName3, text : $budgetText1)
+                    TextField("Phone Payment", text : $budgetText3)
                         .padding()
                         .keyboardType(.numberPad)
                         .background(RoundedRectangle(cornerRadius: 10)
@@ -105,6 +101,6 @@ struct EditPayments: View {
 
 struct EditPayments_Previews: PreviewProvider {
     static var previews: some View {
-        EditPayments(budgetName1: "House Payment", budgetName2: "Phone Payment", budgetName3: "Car Payment", budgetText1: .constant(""), budgetText2: .constant(""), budgetText3: .constant(""))
+        EditPayments(budgetText1: .constant(""), budgetText2: .constant(""), budgetText3: .constant(""))
     }
 }
