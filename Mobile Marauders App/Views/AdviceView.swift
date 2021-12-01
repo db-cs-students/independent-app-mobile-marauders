@@ -43,20 +43,34 @@ struct AdviceView: View {
     ]
     
     var body: some View {
-        VStack {
-            Text("Articles on Budgeting!")
-            NavigationView {
-            List {
-                ForEach(articles, id: \.self) { article in
-                    NavigationLink(
-                        destination: WebView(request: URLRequest(url: URL(string: article.url)!)), label: {
-                            Text("\(article.text)")
-                        })
+        ZStack {
+            Color.init(red: 250/255, green: 244/255, blue: 235/255)
+                .ignoresSafeArea()
+            VStack {
+                Text("Articles on Budgeting!")
+                    .font(.headline)
+                    .fontWeight(.semibold)
+                NavigationView {
+                List {
+                    ForEach(articles, id: \.self) { article in
+                        NavigationLink(
+                            destination: WebView(request: URLRequest(url: URL(string: article.url)!)), label: {
+                                Text("\(article.text)")
+                                    .foregroundColor(Color.blue)
+                                    .shadow(radius: 10)
+                                    
+                                    
+                            })
+                        }
                     }
                 }
+                .frame(width: 300, height: 400)
+                Text("Daily Challenges: ")
+                    .font(.headline)
+                    .fontWeight(.regular)
+                    
             }
-            .frame(width: 300, height: 250)
-            Text("Dailey Challenges")
+            .padding(.bottom, 102.0)
         }
     }
 }
