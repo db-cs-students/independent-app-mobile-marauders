@@ -12,9 +12,12 @@ struct EditPayments: View {
     var budgetName2 : String
     var budgetName3 : String
     
+    
     @Binding var budgetText1 : String
     @Binding var budgetText2 : String
     @Binding var budgetText3 : String
+    
+    
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
@@ -80,7 +83,9 @@ struct EditPayments: View {
                 }
                 Spacer()
                 Button(
-                    action: {},
+                    action: {
+                        
+                    },
                     label: {
                         Text("Add New Payment")
                             .frame(minWidth: 0, maxWidth: .infinity)
@@ -96,6 +101,7 @@ struct EditPayments: View {
         }
     }
 }
+
 
 struct EditPayments_Previews: PreviewProvider {
     static var previews: some View {

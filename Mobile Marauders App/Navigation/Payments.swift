@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct Payments: View {
+    @State var phonePayment : String = "120"
+    @State var carPayment : String = "350"
+    @State var housePayment : String = "750"
     @State var dueToday : String = ""
     @State var dueWeek : String = ""
     @State var dueMonth : String = ""
+    
+    
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
@@ -44,7 +49,7 @@ struct Payments: View {
                     .padding(.bottom, 15)
                 Spacer()
                 NavigationLink(
-                    destination: Text("Placeholder Text"),
+                    destination: EditPayments(budgetName1: "House Payment", budgetName2: "Car Payment", budgetName3: "Phone Payment", budgetText1: $housePayment, budgetText2: $carPayment, budgetText3: $phonePayment),
                     label: {
                         Text("Payment List")
                             .frame(minWidth: 0, maxWidth: .infinity)
@@ -55,7 +60,7 @@ struct Payments: View {
                                             .shadow(radius: 2, y:2)
                             )
                             .padding()
-                })
+                    })
             }
             .padding(.top, 15)
             .padding()
