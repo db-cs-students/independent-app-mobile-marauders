@@ -9,9 +9,9 @@ import SwiftUI
 
 struct EditPayments: View {
     
-    @Binding var budgetText1 : String
-    @Binding var budgetText2 : String
-    @Binding var budgetText3 : String
+    @State var budgetText1 : String = "999"
+    @State var budgetText2 : String = "920"
+    @State var budgetText3 : String = "1000"
     
     
     var body: some View {
@@ -101,6 +101,6 @@ struct EditPayments: View {
 
 struct EditPayments_Previews: PreviewProvider {
     static var previews: some View {
-        EditPayments(budgetText1: .constant(""), budgetText2: .constant(""), budgetText3: .constant(""))
+        EditPayments()
     }
 }

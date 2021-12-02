@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D16E3A827480EC20035D0E1 /* EditBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D16E3A727480EC20035D0E1 /* EditBudget.swift */; };
+		3D2D3A6827592FDC007E9F32 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D3A6727592FDC007E9F32 /* Structs.swift */; };
 		3D2FDE09275542200051A4A5 /* Payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2FDE08275542200051A4A5 /* Payments.swift */; };
 		3D4EEF892744237B006E7E89 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EEF882744237B006E7E89 /* Questions.swift */; };
 		3D5ED7BB27457426009F5043 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5ED7BA27457426009F5043 /* TextField.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		3D16E3A727480EC20035D0E1 /* EditBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudget.swift; sourceTree = "<group>"; };
+		3D2D3A6727592FDC007E9F32 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		3D2FDE08275542200051A4A5 /* Payments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payments.swift; sourceTree = "<group>"; };
 		3D4EEF882744237B006E7E89 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		3D5ED7BA27457426009F5043 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		3D2D3A6627592EFD007E9F32 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3D2D3A6727592FDC007E9F32 /* Structs.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			files = (
 				3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */,
 				3D647B73274C00C0006B32D6 /* PieChart.swift in Sources */,
+				3D2D3A6827592FDC007E9F32 /* Structs.swift in Sources */,
 				3D74A95C273ED4580087EA4B /* Mobile_Marauders_AppApp.swift in Sources */,
 				3DE28E11274D60DF005E229C /* Overview.swift in Sources */,
 				3DF328B42742D48C0092B446 /* New User.swift in Sources */,

@@ -12,15 +12,6 @@ struct EditBudget: View {
     @State var budgetAmount : String = ""
     @State var repeatDate = Repeat.Weekly
     
-    enum Repeat : String, CaseIterable, Identifiable {
-        case Daily
-        case Weekly
-        case Biweekly
-        case Monthly
-        case Yearly
-        
-        var id: String { self.rawValue }
-    }
     
     var body: some View {
         ZStack {
