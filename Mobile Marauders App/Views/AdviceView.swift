@@ -68,6 +68,10 @@ struct AdviceView: View {
                 Text("Daily Challenges: ")
                     .font(.headline)
                     .fontWeight(.regular)
+                    .padding()
+                Text("Gone over budget")
+                    .font(.headline)
+                    .fontWeight(.regular)
                     
             }
             .padding(.bottom, 102.0)
