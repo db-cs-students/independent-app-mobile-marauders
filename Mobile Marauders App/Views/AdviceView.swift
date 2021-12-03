@@ -58,13 +58,12 @@ struct AdviceView: View {
                                 Text("\(article.text)")
                                     .foregroundColor(Color.blue)
                                     .shadow(radius: 10)
-                                    
-                                    
                             })
                         }
                     }
                 }
-                .frame(width: 300, height: 400)
+                .frame(width: 275, height: 300)
+                HStack {
                 Text("Daily Challenges: ")
                     .font(.headline)
                     .fontWeight(.regular)
@@ -72,7 +71,9 @@ struct AdviceView: View {
                 Text("Gone over budget")
                     .font(.headline)
                     .fontWeight(.regular)
-                    
+                }
+                GButtonView(name: "Goals", nav: AnyView(ContentView()))
+                    //.frame()
             }
             .padding(.bottom, 102.0)
         }
