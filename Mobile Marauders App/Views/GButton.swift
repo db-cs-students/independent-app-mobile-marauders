@@ -11,7 +11,6 @@ struct GButtonView: View {
     @State var name: String
     @State var nav: AnyView
     var body: some View {
-        ZStack{
             NavigationView {
                 NavigationLink(
                     destination: nav,
@@ -29,7 +28,7 @@ struct GButtonView: View {
                             }
                         })
                     }
-                }
+            .frame(width: 250, height: 250)
             }
         }
 

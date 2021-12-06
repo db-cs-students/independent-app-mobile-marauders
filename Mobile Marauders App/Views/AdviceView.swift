@@ -50,19 +50,20 @@ struct AdviceView: View {
                 Text("Articles on Budgeting!")
                     .font(.headline)
                     .fontWeight(.semibold)
+                    .padding(.top, 150.0)
                 NavigationView {
-                List {
-                    ForEach(articles, id: \.self) { article in
-                        NavigationLink(
-                            destination: WebView(request: URLRequest(url: URL(string: article.url)!)), label: {
-                                Text("\(article.text)")
-                                    .foregroundColor(Color.blue)
-                                    .shadow(radius: 10)
-                            })
+                    List {
+                        ForEach(articles, id: \.self) { article in
+                            NavigationLink(
+                                destination: WebView(request: URLRequest(url: URL(string: article.url)!)), label: {
+                                    Text("\(article.text)")
+                                        .foregroundColor(Color.blue)
+                                        .shadow(radius: 10)
+                                })
                         }
                     }
                 }
-                .frame(width: 275, height: 300)
+                .frame(width: 275, height: 450)
                 HStack {
                 Text("Daily Challenges: ")
                     .font(.headline)
@@ -73,7 +74,6 @@ struct AdviceView: View {
                     .fontWeight(.regular)
                 }
                 GButtonView(name: "Goals", nav: AnyView(ContentView()))
-                    //.frame()
             }
             .padding(.bottom, 102.0)
         }
