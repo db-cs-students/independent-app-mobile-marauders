@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct Payments: View {
-    var payments : [Payment] = [Payment(name: "Car Payment", amount: 200.00, type: Type.Car), Payment(name: "House Payment", amount: 600.00, type: Type.House), Payment(name:"Phone Payment", amount: 125.00, type: Type.Phone)]
+    @EnvironmentObject var data: Data
+    
+//    var payments : [Payment] = [Payment(name: "Car Payment", amount: 200.00, type: Type.Car), Payment(name: "House Payment", amount: 600.00, type: Type.House), Payment(name:"Phone Payment", amount: 125.00, type: Type.Phone)]
     @State var dueToday : String
     @State var dueWeek : String
     @State var dueMonth : String
@@ -24,7 +26,7 @@ struct Payments: View {
                 CustomNumberTextField(title: "$ Due This Month", preview: "Monthly Payments", text: $dueMonth)
                 Spacer()
                 NavigationLink(
-                    destination: EditPayments(payments: payments, paymentText: ""),
+                    destination: EditPayments(payments: data.payments, paymentText: ""),
                     label: {
                         Text("Payment List")
                             .frame(minWidth: 0, maxWidth: .infinity)
@@ -44,5 +46,6 @@ struct Payments: View {
 struct Payments_Previews: PreviewProvider {
     static var previews: some View {
         Payments(dueToday: "56", dueWeek: "230", dueMonth: "1235")
+            .environmentObject(Data())
     }
 }

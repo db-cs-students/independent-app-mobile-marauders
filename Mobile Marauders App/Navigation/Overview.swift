@@ -19,7 +19,7 @@ struct Overview: View {
                 Text("$\(values[0], specifier: "%.0f")")
                     .font(.title2)
                     .bold()
-                PieChart(values: [300, 400, 450, 200], colors: [Color("PiePercentage"), Color("Red"), Color(.red), Color("Pink")], names: ["Available", "Bills", "House", "Subscriptions"], backgroundColor: Color("Background"), innerRadiusFraction: 0.52)
+                PieChart(values: [(income - expenses), 400, 450, 200], colors: [Color("PiePercentage"), Color("Red"), Color(.red), Color("Pink")], names: ["Available", "Bills", "House", "Subscriptions"], backgroundColor: Color("Background"), innerRadiusFraction: 0.52)
             }
         }
         .navigationBarTitle("")
@@ -29,7 +29,7 @@ struct Overview: View {
 }
 
 struct Overview_Previews: PreviewProvider {
-    static let values: [Double] = [300, 400, 450, 200]
+    static let values: [Double] = [(income-expenses), 400, 450, 200]
     static var previews: some View {
         Overview(values: values)
     }
