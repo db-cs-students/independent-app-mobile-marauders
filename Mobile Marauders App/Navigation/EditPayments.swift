@@ -8,20 +8,18 @@
 import SwiftUI
 
 struct EditPayments: View {
-    
-    @State var paymentText1 : String = "999"
-    @State var paymentText2 : String = "920"
-    @State var paymentText3 : String = "1000"
+    var payments : [Payment]
+    @State var paymentText : String
     
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
             VStack {
                 ScrollView {
-                    ForEach(payments) { p in
+                    ForEach(payments, id: \.self) { payment in
                         VStack {
                             HStack {
-                                Text(p.name)
+                                Text(payment.name)
                                 Spacer()
                                 Button(action: {}, label: {
                                     Image(systemName: "delete.left")
@@ -29,7 +27,7 @@ struct EditPayments: View {
                                 })
                             }
                             .padding()
-                            TextField(p.name, text: $paymentText1)
+                            TextField(payment.name, text: $paymentText)
                                 .padding()
                                 .keyboardType(.numberPad)
                                 .background(RoundedRectangle(cornerRadius: 10)
@@ -37,6 +35,7 @@ struct EditPayments: View {
                                                 .shadow(radius: 2, y:2)
                                 )
                         }
+                        .padding()
                     }
                 }
                 Button(
@@ -56,93 +55,11 @@ struct EditPayments: View {
             }
         }
     }
-    //    var body: some View {
-    //        ZStack {
-    //            Color("Background").ignoresSafeArea()
-    //            VStack {
-    //                VStack {
-    //                    HStack {
-    //                        Text("House Payment")
-    //                        Spacer()
-    //                        Button(action: {}, label: {
-    //                            Image(systemName: "delete.left")
-    //                                .foregroundColor(.red)
-    //                        })
-    //                    }
-    //                    .padding()
-    //                    TextField("House Payment", text : $budgetText1)
-    //                        .padding()
-    //                        .keyboardType(.numberPad)
-    //                        .background(RoundedRectangle(cornerRadius: 10)
-    //                                        .fill(Color.white)
-    //                                        .shadow(radius: 2, y:2)
-    //                        )
-    //                        .padding()
-    //                }
-    //                Spacer()
-    //                VStack {
-    //                    HStack {
-    //                        Text("Car Payment")
-    //                        Spacer()
-    //                        Button(action: {}, label: {
-    //                            Image(systemName: "delete.left")
-    //                                .foregroundColor(.red)
-    //                        })
-    //                    }
-    //                    .padding()
-    //                    TextField("Car Payment", text : $budgetText2)
-    //                        .padding()
-    //                        .keyboardType(.numberPad)
-    //                        .background(RoundedRectangle(cornerRadius: 10)
-    //                                        .fill(Color.white)
-    //                                        .shadow(radius: 2, y:2)
-    //                        )
-    //                        .padding()
-    //                }
-    //                Spacer()
-    //                VStack {
-    //                    HStack {
-    //                        Text("Phone Payment")
-    //                        Spacer()
-    //                        Button(action: {}, label: {
-    //                            Image(systemName: "delete.left")
-    //                                .foregroundColor(.red)
-    //                        })
-    //                    }
-    //                    .padding()
-    //                    TextField("Phone Payment", text : $budgetText3)
-    //                        .padding()
-    //                        .keyboardType(.numberPad)
-    //                        .background(RoundedRectangle(cornerRadius: 10)
-    //                                        .fill(Color.white)
-    //                                        .shadow(radius: 2, y:2)
-    //                        )
-    //                        .padding()
-    //                }
-    //                Spacer()
-    //                Button(
-    //                    action: {
-    //
-    //                    },
-    //                    label: {
-    //                        Text("Add New Payment")
-    //                            .frame(minWidth: 0, maxWidth: .infinity)
-    //                            .padding()
-    //                            .foregroundColor(.black)
-    //                            .background(RoundedRectangle(cornerRadius: 10)
-    //                                            .fill(Color("Pink"))
-    //                                            .shadow(radius: 2, y:2)
-    //                            )
-    //                            .padding()
-    //                })
-    //            }
-    //        }
-    //    }
 }
 
 
 struct EditPayments_Previews: PreviewProvider {
     static var previews: some View {
-        EditPayments()
+        EditPayments(payments:[Payment(name: "Budget 1", amount: 56.6, type: Type.Car), Payment(name: "Budget 2", amount: 400.6, type: Type.House), Payment(name: "Budget 3", amount: 100.6, type: Type.Other), Payment(name: "Budget 4", amount: 56.6, type: Type.House), Payment(name: "Budget 5", amount: 56.6, type: Type.House), Payment(name: "Budget 6", amount: 56.6, type: Type.House)], paymentText: "")
     }
 }

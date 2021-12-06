@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Payments: View {
-    
+    var payments : [Payment] = [Payment(name: "Car Payment", amount: 200.00, type: Type.Car), Payment(name: "House Payment", amount: 600.00, type: Type.House), Payment(name:"Phone Payment", amount: 125.00, type: Type.Phone)]
     @State var dueToday : String
     @State var dueWeek : String
     @State var dueMonth : String
@@ -24,7 +24,7 @@ struct Payments: View {
                 CustomNumberTextField(title: "$ Due This Month", preview: "Monthly Payments", text: $dueMonth)
                 Spacer()
                 NavigationLink(
-                    destination: EditPayments(),
+                    destination: EditPayments(payments: payments, paymentText: ""),
                     label: {
                         Text("Payment List")
                             .frame(minWidth: 0, maxWidth: .infinity)
