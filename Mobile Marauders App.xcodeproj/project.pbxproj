@@ -7,27 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D16E3A827480EC20035D0E1 /* EditBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D16E3A727480EC20035D0E1 /* EditBudget.swift */; };
+		3D2D3A6827592FDC007E9F32 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D3A6727592FDC007E9F32 /* Structs.swift */; };
+		3D2FDE09275542200051A4A5 /* Payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2FDE08275542200051A4A5 /* Payments.swift */; };
+		3D4EEF892744237B006E7E89 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EEF882744237B006E7E89 /* Questions.swift */; };
+		3D56A906275FD11A003F93F1 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D56A904275FD11A003F93F1 /* TextField.swift */; };
+		3D56A907275FD11A003F93F1 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D56A905275FD11A003F93F1 /* PieChart.swift */; };
+		3D732337273ED86600B69F64 /* Login Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D732336273ED86600B69F64 /* Login Screen.swift */; };
 		3D74A95C273ED4580087EA4B /* Mobile_Marauders_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D74A95B273ED4580087EA4B /* Mobile_Marauders_AppApp.swift */; };
 		3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D74A95D273ED4580087EA4B /* ContentView.swift */; };
 		3D74A960273ED45B0087EA4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D74A95F273ED45B0087EA4B /* Assets.xcassets */; };
 		3D74A963273ED45B0087EA4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D74A962273ED45B0087EA4B /* Preview Assets.xcassets */; };
-		3D822271275930B000DB9FEC /* BudgetData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D822270275930B000DB9FEC /* BudgetData.json */; };
-		3D83C1222757ED8D00263905 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83C1212757ED8D00263905 /* Budget.swift */; };
+		3D8123EB275688B1004A5A57 /* AddBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8123EA275688B1004A5A57 /* AddBudget.swift */; };
+		3D8123ED27569333004A5A57 /* EditPayments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8123EC27569333004A5A57 /* EditPayments.swift */; };
 		3D84F47B27568A900053B541 /* BudgetTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D84F47A27568A900053B541 /* BudgetTable.swift */; };
 		3DC6103F274575E0005BBD4E /* GButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6103E274575E0005BBD4E /* GButton.swift */; };
+		3DE28E11274D60DF005E229C /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE28E10274D60DF005E229C /* Overview.swift */; };
+		3DF328B42742D48C0092B446 /* New User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF328B32742D48C0092B446 /* New User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D74A958273ED4580087EA4B /* Mobile Marauders App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Marauders App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D16E3A727480EC20035D0E1 /* EditBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudget.swift; sourceTree = "<group>"; };
+		3D2D3A6727592FDC007E9F32 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		3D2FDE08275542200051A4A5 /* Payments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payments.swift; sourceTree = "<group>"; };
+		3D4EEF882744237B006E7E89 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		3D56A904275FD11A003F93F1 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		3D56A905275FD11A003F93F1 /* PieChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		3D732336273ED86600B69F64 /* Login Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login Screen.swift"; sourceTree = "<group>"; };
+		3D74A958273ED4580087EA4B /* Mobile Marauders App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Mobile Marauders App.app"; path = "/Users/cblock/develop/Mobile Marauders App/build/Debug-iphoneos/Mobile Marauders App.app"; sourceTree = "<absolute>"; };
 		3D74A95B273ED4580087EA4B /* Mobile_Marauders_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Marauders_AppApp.swift; sourceTree = "<group>"; };
 		3D74A95D273ED4580087EA4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3D74A95F273ED45B0087EA4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D74A962273ED45B0087EA4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D74A964273ED45B0087EA4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D822270275930B000DB9FEC /* BudgetData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BudgetData.json; sourceTree = "<group>"; };
-		3D83C1212757ED8D00263905 /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		3D8123EA275688B1004A5A57 /* AddBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudget.swift; sourceTree = "<group>"; };
+		3D8123EC27569333004A5A57 /* EditPayments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPayments.swift; sourceTree = "<group>"; };
 		3D84F47A27568A900053B541 /* BudgetTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetTable.swift; sourceTree = "<group>"; };
 		3DC6103E274575E0005BBD4E /* GButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GButton.swift; sourceTree = "<group>"; };
+		3DE28E10274D60DF005E229C /* Overview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overview.swift; sourceTree = "<group>"; };
+		3DF328B32742D48C0092B446 /* New User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "New User.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,26 +59,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D2D3A6627592EFD007E9F32 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3D2D3A6727592FDC007E9F32 /* Structs.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3D56A903275FD11A003F93F1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3DC6103E274575E0005BBD4E /* GButton.swift */,
+				3D56A904275FD11A003F93F1 /* TextField.swift */,
+				3D56A905275FD11A003F93F1 /* PieChart.swift */,
+			);
+			name = Helpers;
+			path = "Mobile Marauders App/Helpers";
+			sourceTree = SOURCE_ROOT;
+		};
 		3D74A94F273ED4580087EA4B = {
 			isa = PBXGroup;
 			children = (
 				3D74A95A273ED4580087EA4B /* Mobile Marauders App */,
-				3D74A959273ED4580087EA4B /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		3D74A959273ED4580087EA4B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3D74A958273ED4580087EA4B /* Mobile Marauders App.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		3D74A95A273ED4580087EA4B /* Mobile Marauders App */ = {
 			isa = PBXGroup;
 			children = (
 				3D74A95B273ED4580087EA4B /* Mobile_Marauders_AppApp.swift */,
+				3D56A903275FD11A003F93F1 /* Helpers */,
+				3D2D3A6627592EFD007E9F32 /* Data */,
+				3DF328B52742D4B10092B446 /* Navigation */,
 				3D74A96D273ED5CF0087EA4B /* Views */,
 				3D74A95F273ED45B0087EA4B /* Assets.xcassets */,
 				3D74A964273ED45B0087EA4B /* Info.plist */,
@@ -80,13 +111,25 @@
 		3D74A96D273ED5CF0087EA4B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3D83C1212757ED8D00263905 /* Budget.swift */,
-				3D822270275930B000DB9FEC /* BudgetData.json */,
 				3D74A95D273ED4580087EA4B /* ContentView.swift */,
-				3D84F47A27568A900053B541 /* BudgetTable.swift */,
-				3DC6103E274575E0005BBD4E /* GButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3DF328B52742D4B10092B446 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				3D732336273ED86600B69F64 /* Login Screen.swift */,
+				3DF328B32742D48C0092B446 /* New User.swift */,
+				3D4EEF882744237B006E7E89 /* Questions.swift */,
+				3DE28E10274D60DF005E229C /* Overview.swift */,
+				3D16E3A727480EC20035D0E1 /* EditBudget.swift */,
+				3D8123EA275688B1004A5A57 /* AddBudget.swift */,
+				3D2FDE08275542200051A4A5 /* Payments.swift */,
+				3D8123EC27569333004A5A57 /* EditPayments.swift */,
+				3D84F47A27568A900053B541 /* BudgetTable.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +175,7 @@
 				Base,
 			);
 			mainGroup = 3D74A94F273ED4580087EA4B;
-			productRefGroup = 3D74A959273ED4580087EA4B /* Products */;
+			productRefGroup = 3D74A94F273ED4580087EA4B;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -147,7 +190,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D74A963273ED45B0087EA4B /* Preview Assets.xcassets in Resources */,
-				3D822271275930B000DB9FEC /* BudgetData.json in Resources */,
 				3D74A960273ED45B0087EA4B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,8 +202,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */,
+				3D2D3A6827592FDC007E9F32 /* Structs.swift in Sources */,
 				3D74A95C273ED4580087EA4B /* Mobile_Marauders_AppApp.swift in Sources */,
-				3D83C1222757ED8D00263905 /* Budget.swift in Sources */,
+				3DE28E11274D60DF005E229C /* Overview.swift in Sources */,
+				3DF328B42742D48C0092B446 /* New User.swift in Sources */,
+				3D56A906275FD11A003F93F1 /* TextField.swift in Sources */,
+				3D2FDE09275542200051A4A5 /* Payments.swift in Sources */,
+				3D56A907275FD11A003F93F1 /* PieChart.swift in Sources */,
+				3D8123EB275688B1004A5A57 /* AddBudget.swift in Sources */,
+				3D8123ED27569333004A5A57 /* EditPayments.swift in Sources */,
+				3D4EEF892744237B006E7E89 /* Questions.swift in Sources */,
+				3D732337273ED86600B69F64 /* Login Screen.swift in Sources */,
+				3D16E3A827480EC20035D0E1 /* EditBudget.swift in Sources */,
 				3D84F47B27568A900053B541 /* BudgetTable.swift in Sources */,
 				3DC6103F274575E0005BBD4E /* GButton.swift in Sources */,
 			);
