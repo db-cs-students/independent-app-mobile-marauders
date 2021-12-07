@@ -14,6 +14,7 @@
 		3D822271275930B000DB9FEC /* BudgetData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D822270275930B000DB9FEC /* BudgetData.json */; };
 		3D83C1222757ED8D00263905 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83C1212757ED8D00263905 /* Budget.swift */; };
 		3D84F47B27568A900053B541 /* BudgetTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D84F47A27568A900053B541 /* BudgetTable.swift */; };
+		3DC6103F274575E0005BBD4E /* GButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6103E274575E0005BBD4E /* GButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3D822270275930B000DB9FEC /* BudgetData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BudgetData.json; sourceTree = "<group>"; };
 		3D83C1212757ED8D00263905 /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		3D84F47A27568A900053B541 /* BudgetTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetTable.swift; sourceTree = "<group>"; };
+		3DC6103E274575E0005BBD4E /* GButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				3D822270275930B000DB9FEC /* BudgetData.json */,
 				3D74A95D273ED4580087EA4B /* ContentView.swift */,
 				3D84F47A27568A900053B541 /* BudgetTable.swift */,
+				3DC6103E274575E0005BBD4E /* GButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				3D74A95C273ED4580087EA4B /* Mobile_Marauders_AppApp.swift in Sources */,
 				3D83C1222757ED8D00263905 /* Budget.swift in Sources */,
 				3D84F47B27568A900053B541 /* BudgetTable.swift in Sources */,
+				3DC6103F274575E0005BBD4E /* GButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
