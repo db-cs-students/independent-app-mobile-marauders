@@ -11,6 +11,7 @@
 		3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D74A95D273ED4580087EA4B /* ContentView.swift */; };
 		3D74A960273ED45B0087EA4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D74A95F273ED45B0087EA4B /* Assets.xcassets */; };
 		3D74A963273ED45B0087EA4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D74A962273ED45B0087EA4B /* Preview Assets.xcassets */; };
+		3D822271275930B000DB9FEC /* BudgetData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D822270275930B000DB9FEC /* BudgetData.json */; };
 		3D83C1222757ED8D00263905 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83C1212757ED8D00263905 /* Budget.swift */; };
 		3D84F47B27568A900053B541 /* BudgetTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D84F47A27568A900053B541 /* BudgetTable.swift */; };
 /* End PBXBuildFile section */
@@ -22,6 +23,7 @@
 		3D74A95F273ED45B0087EA4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D74A962273ED45B0087EA4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D74A964273ED45B0087EA4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D822270275930B000DB9FEC /* BudgetData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BudgetData.json; sourceTree = "<group>"; };
 		3D83C1212757ED8D00263905 /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		3D84F47A27568A900053B541 /* BudgetTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				3D83C1212757ED8D00263905 /* Budget.swift */,
+				3D822270275930B000DB9FEC /* BudgetData.json */,
 				3D74A95D273ED4580087EA4B /* ContentView.swift */,
 				3D84F47A27568A900053B541 /* BudgetTable.swift */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D74A963273ED45B0087EA4B /* Preview Assets.xcassets in Resources */,
+				3D822271275930B000DB9FEC /* BudgetData.json in Resources */,
 				3D74A960273ED45B0087EA4B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

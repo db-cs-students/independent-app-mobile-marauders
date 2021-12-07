@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct Budget: Identifiable {
+
+struct Budget: Codable, Identifiable {
     let id: UUID
     let name: String
     let daysleft: Int
@@ -22,17 +23,21 @@ struct Budget: Identifiable {
 }
 
 private var budgets = [
-    Budget(name: "Food", daysleft: 20, pace: true)
+    Budget(name: "Food", daysleft: 20, pace: true),
+    Budget(name: "Car", daysleft: 17, pace: false)
 ]
 
 struct BudgetTable: View {
-    var budget = Budget
     var body: some View {
-        HStack {
-            Text(verbatim: budgets.name)
+            List(budgets) {
+                Text($0.name)
+//                Text($0.daysleft)
+//                Text($0.pace)
+                }
+            }
         }
-    }
-}
+
+
 
 struct BudgetTable_Previews: PreviewProvider {
     static var previews: some View {
