@@ -41,6 +41,7 @@ struct EditPayments: View {
                 }
                 Button(
                     action: {
+                        
                     },
                     label: {
                         Text("Add New Payment")

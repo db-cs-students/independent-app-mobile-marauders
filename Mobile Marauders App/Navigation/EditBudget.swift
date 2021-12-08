@@ -11,8 +11,14 @@ struct EditBudget: View {
     @State var budgetName : String = ""
     @State var budgetAmount : String = ""
     @State var repeatDate = Repeat.Weekly
+    @EnvironmentObject var data : Data
     
-    
+    func createNumber() -> Double? {
+        guard let budgetAmountNumber = Double(budgetAmount) else {
+            return nil
+        }
+        return budgetAmountNumber
+    }
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
@@ -33,10 +39,10 @@ struct EditBudget: View {
                     }
                 }
                 Spacer()
-                
-                HStack {
+                NavigationLink(destination: BudgetTable(), label: {
+                                HStack {
                     Button(action: {
-                        
+                        data.addBudget(budget: Budget(name: budgetName, amount: createNumber() ?? 100.00, repeatDate: repeatDate, daysLeft: 14, pace: false))
                     }, label: {
                         Text("Finish")
                             .frame(minWidth: 0, maxWidth: .infinity)
@@ -49,7 +55,6 @@ struct EditBudget: View {
                     )
                     .padding()
                     Button(action: {
-                        
                     }, label: {
                         Text("Delete")
                             .frame(minWidth: 0, maxWidth: .infinity)
@@ -61,7 +66,7 @@ struct EditBudget: View {
                                     .shadow(radius: 2, y:2)
                     )
                     .padding()
-                }
+                }})
             }
         }
         .navigationBarTitle("")
@@ -73,5 +78,6 @@ struct EditBudget: View {
 struct EditBudget_Previews: PreviewProvider {
     static var previews: some View {
         EditBudget()
+            .environmentObject(Data())
     }
 }

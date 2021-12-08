@@ -10,7 +10,7 @@ import SwiftUI
 struct Questions: View {
     @State var currentBalance : String = ""
     @State var currentLoans : String = ""
-    @State var weeklyIncome : String = ""
+    @State var monthlyIncome : String = ""
     @State var userExpenses : String = ""
     var body: some View {
         ZStack {
@@ -18,7 +18,7 @@ struct Questions: View {
             VStack {
                 CustomNumberTextField(title: "Current Balance:", preview: "Balance ($)", text: $currentBalance)
                 CustomNumberTextField(title: "Current Loans:", preview:"Loans ($)", text: $currentLoans)
-                CustomNumberTextField(title: "Weekly Income:", preview: "Income ($)", text: $weeklyIncome)
+                CustomNumberTextField(title: "Monthly Income:", preview: "Income ($)", text: $monthlyIncome)
                 CustomNumberTextField(title: "Other Expenses:", preview: "Expenses ($)", text: $userExpenses)
                 Spacer()
                 HStack {

@@ -12,6 +12,7 @@ class Data: ObservableObject {
     @Published var budgets : [Budget] = [Budget(name: "Subscriptions", amount: 50.00, repeatDate: Repeat.Monthly, daysLeft: 30, pace: false)]
     @Published var monthlyIncome : Double = 2500.00
     @Published var monthlyExpenses : Double = 1234.00
+    @Published var currentBalance : Double = 120.00
 
     func removePayment(payment: Payment) {
         if let index = payments.firstIndex(of: payment) {
