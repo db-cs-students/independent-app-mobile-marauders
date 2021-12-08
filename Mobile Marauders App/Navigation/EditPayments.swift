@@ -20,7 +20,9 @@ struct EditPayments: View {
                             HStack {
                                 Text(payment.name)
                                 Spacer()
-                                Button(action: {}, label: {
+                                Button(action: {
+                                    data.removePayment(payment: payment)
+                                }, label: {
                                     Image(systemName: "delete.left")
                                         .foregroundColor(.red)
                                 })
