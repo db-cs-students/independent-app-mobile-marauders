@@ -42,6 +42,10 @@ struct AdviceView: View {
         Article("How to buy a car", url: "https://www.ramseysolutions.com/debt/the-truth-about-car-payments")
     ]
     
+    init(){
+            UITableView.appearance().backgroundColor = .clear
+        }
+    
     var body: some View {
         NavigationView {
         ZStack {
@@ -52,20 +56,18 @@ struct AdviceView: View {
                     .font(.headline)
                     .fontWeight(.semibold)
                     .padding(.bottom, 25.0)
-                NavigationView {
+                
                     List {
                         ForEach(articles, id: \.self) { article in
                             NavigationLink(
                                 destination: WebView(request: URLRequest(url: URL(string: article.url)!)), label: {
                                     Text("\(article.text)")
                                         .foregroundColor(Color.blue)
-                                        .shadow(radius: 10)
                                 })
-                                .listRowBackground(Color.init(red: 250/255, green: 244/255, blue: 235/255))
                         }
+                        .listRowBackground(Color.init(red: 250/255, green: 244/255, blue: 235/255))
+                        .colorMultiply(.blue)
                     }
-                }
-                .frame(width: 375, height: 575)
 //                HStack {
 //                Text("Daily Challenges: ")
 //                    .font(.headline)
