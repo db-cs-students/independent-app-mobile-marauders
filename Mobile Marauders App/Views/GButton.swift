@@ -7,11 +7,12 @@
 
 import SwiftUI
 
+//make sure to to wrap your all of your content in a navigation view when implementing a button
+
 struct GButtonView: View {
     @State var name: String
     @State var nav: AnyView
     var body: some View {
-            NavigationView {
                 NavigationLink(
                     destination: nav,
                     label: {
@@ -27,15 +28,17 @@ struct GButtonView: View {
                                 .foregroundColor(Color.black)
                             }
                         })
-                    }
-            .frame(width: 250, height: 250)
+        
+            //.frame(width: 250, height: 250)
             }
         }
 
 struct GButtonView_Previews: PreviewProvider {
     static var previews: some View {
         //make sure to wrap the view your navigating to in a 'AnyView' to work
+        NavigationView {
         GButtonView(name: "Button", nav: AnyView(ContentView()))
+        }
     }
 }
 

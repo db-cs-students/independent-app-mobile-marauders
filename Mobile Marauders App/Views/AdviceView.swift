@@ -43,6 +43,7 @@ struct AdviceView: View {
     ]
     
     var body: some View {
+        NavigationView {
         ZStack {
             Color.init(red: 250/255, green: 244/255, blue: 235/255)
                 .ignoresSafeArea()
@@ -50,7 +51,7 @@ struct AdviceView: View {
                 Text("Articles on Budgeting!")
                     .font(.headline)
                     .fontWeight(.semibold)
-                    .padding(.top, 150.0)
+                    .padding(.bottom, 25.0)
                 NavigationView {
                     List {
                         ForEach(articles, id: \.self) { article in
@@ -60,22 +61,24 @@ struct AdviceView: View {
                                         .foregroundColor(Color.blue)
                                         .shadow(radius: 10)
                                 })
+                                .listRowBackground(Color.init(red: 250/255, green: 244/255, blue: 235/255))
                         }
                     }
                 }
-                .frame(width: 275, height: 450)
-                HStack {
-                Text("Daily Challenges: ")
-                    .font(.headline)
-                    .fontWeight(.regular)
-                    .padding()
-                Text("Gone over budget")
-                    .font(.headline)
-                    .fontWeight(.regular)
-                }
+                .frame(width: 375, height: 575)
+//                HStack {
+//                Text("Daily Challenges: ")
+//                    .font(.headline)
+//                    .fontWeight(.regular)
+//                    .padding()
+//                Text("Gone over budget?")
+//                    .font(.headline)
+//                    .fontWeight(.regular)
+//                }
+                
                 GButtonView(name: "Goals", nav: AnyView(ContentView()))
+                }
             }
-            .padding(.bottom, 102.0)
         }
     }
 }
