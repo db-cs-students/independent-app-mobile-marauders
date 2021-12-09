@@ -9,9 +9,6 @@ import SwiftUI
 
 struct Payments: View {
     @EnvironmentObject var data: Data
-    @State var dueToday : String
-    @State var dueWeek : String
-    @State var dueMonth : String
     
     var body: some View {
         ZStack {
@@ -78,7 +75,7 @@ struct Payments: View {
 
 struct Payments_Previews: PreviewProvider {
     static var previews: some View {
-        Payments(dueToday: "56", dueWeek: "230", dueMonth: "1235")
+        Payments()
             .environmentObject(Data())
     }
 }

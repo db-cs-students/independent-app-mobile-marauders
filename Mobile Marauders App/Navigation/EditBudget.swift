@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct EditBudget: View {
-    @State var budgetName : String = ""
-    @State var budgetAmount : String = ""
-    @State var repeatDate = Repeat.Weekly
+    @State var budgetName : String
+    @State var budgetAmount : String
+    @State var repeatDate : Repeat
     @EnvironmentObject var data : Data
     
     func createNumber() -> Double? {
@@ -19,6 +19,22 @@ struct EditBudget: View {
         }
         return budgetAmountNumber
     }
+    
+    func determineDays() -> Int {
+        switch repeatDate {
+        case Repeat.Daily:
+            return 1
+        case Repeat.Weekly:
+            return 7
+        case Repeat.Biweekly:
+            return 14
+        case Repeat.Monthly:
+            return 30
+        default:
+            return 365
+        }
+    }
+    
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
@@ -42,7 +58,7 @@ struct EditBudget: View {
                 NavigationLink(destination: BudgetTable(), label: {
                                 HStack {
                     Button(action: {
-                        data.addBudget(budget: Budget(name: budgetName, amount: createNumber() ?? 100.00, repeatDate: repeatDate, daysLeft: 14, pace: false))
+                        data.addBudget(budget: Budget(name: budgetName, amount: createNumber() ?? 0.00, repeatDate: repeatDate, daysLeft: determineDays(), pace: false))
                     }, label: {
                         Text("Finish")
                             .frame(minWidth: 0, maxWidth: .infinity)
@@ -77,7 +93,7 @@ struct EditBudget: View {
 
 struct EditBudget_Previews: PreviewProvider {
     static var previews: some View {
-        EditBudget()
+        EditBudget(budgetName: "", budgetAmount: "", repeatDate: Repeat.Weekly)
             .environmentObject(Data())
     }
 }
