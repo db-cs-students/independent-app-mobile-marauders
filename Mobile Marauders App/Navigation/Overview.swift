@@ -20,7 +20,7 @@ struct Overview: View {
                 Text("$\(values[0], specifier: "%.0f")")
                     .font(.title2)
                     .bold()
-                PieChart(values: [(data.currentBalance + data.monthlyIncome - data.monthlyExpenses), 400, 450, 200], colors: [Color("PiePercentage"), Color("Red"), Color(.red), Color("Pink")], names: ["Available", "Bills", "House", "Subscriptions"], backgroundColor: Color("Background"), innerRadiusFraction: 0.52)
+                PieChart(values: [(data.currentBalance), 400, 450, 200], colors: [Color("PiePercentage"), Color("Red"), Color(.red), Color("Pink")], names: ["Available", "Bills", "House", "Subscriptions"], backgroundColor: Color("Background"), innerRadiusFraction: 0.54)
             }
         }
         .navigationBarTitle("")
