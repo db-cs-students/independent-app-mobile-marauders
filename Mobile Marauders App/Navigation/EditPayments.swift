@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EditPayments: View {
     @EnvironmentObject var data : Data
-
+    
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
@@ -39,10 +39,8 @@ struct EditPayments: View {
                         .padding()
                     }
                 }
-                Button(
-                    action: {
-                        
-                    },
+                NavigationLink(
+                    destination: AddPayment(),
                     label: {
                         Text("Add New Payment")
                             .frame(minWidth: 0, maxWidth: .infinity)
