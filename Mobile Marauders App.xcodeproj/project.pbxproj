@@ -11,6 +11,7 @@
 		3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D74A95D273ED4580087EA4B /* ContentView.swift */; };
 		3D74A960273ED45B0087EA4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D74A95F273ED45B0087EA4B /* Assets.xcassets */; };
 		3D74A963273ED45B0087EA4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D74A962273ED45B0087EA4B /* Preview Assets.xcassets */; };
+		3DAC3EAC27626AE000CBD985 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC3EAB27626AE000CBD985 /* TabView.swift */; };
 		3DC6103F274575E0005BBD4E /* GButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6103E274575E0005BBD4E /* GButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,7 @@
 		3D74A95F273ED45B0087EA4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D74A962273ED45B0087EA4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D74A964273ED45B0087EA4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DAC3EAB27626AE000CBD985 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		3DC6103E274575E0005BBD4E /* GButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +58,6 @@
 			children = (
 				3D74A95B273ED4580087EA4B /* Mobile_Marauders_AppApp.swift */,
 				3D74A96D273ED5CF0087EA4B /* Views */,
-				3D74A96C273ED5C70087EA4B /* Helpers */,
 				3D74A95F273ED45B0087EA4B /* Assets.xcassets */,
 				3D74A964273ED45B0087EA4B /* Info.plist */,
 				3D74A961273ED45B0087EA4B /* Preview Content */,
@@ -72,18 +73,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		3D74A96C273ED5C70087EA4B /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		3D74A96D273ED5CF0087EA4B /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				3D74A95D273ED4580087EA4B /* ContentView.swift */,
 				3DC6103E274575E0005BBD4E /* GButton.swift */,
+				3DAC3EAB27626AE000CBD985 /* TabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +154,7 @@
 			files = (
 				3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */,
 				3D74A95C273ED4580087EA4B /* Mobile_Marauders_AppApp.swift in Sources */,
+				3DAC3EAC27626AE000CBD985 /* TabView.swift in Sources */,
 				3DC6103F274575E0005BBD4E /* GButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
