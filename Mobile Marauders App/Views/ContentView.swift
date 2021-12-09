@@ -14,19 +14,24 @@ struct ContentView: View {
     let foods = ["apple", "banana"]
     
     var body: some View {
-        VStack {
-            
-            Text("My favorite food is \(food) and my pet is \(pet)")
-                .overlay(OverlayView(selection: $pet, items: pets), alignment: .top)
-                
-                
+
+        NavigationView {
+            Login_Screen()
         }
-        
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarTitleDisplayMode(.inline)
+
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NavigationView {
+            Login_Screen()
+        }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
