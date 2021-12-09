@@ -29,6 +29,7 @@ struct TabView: View {
                         Text("Payments")
                     }
                     .frame(width: 80, height: 50)
+                    .foregroundColor(.black)
                 }
                 NavigationLink(destination: ContentView()) {
                     VStack {
@@ -37,6 +38,7 @@ struct TabView: View {
                         Text("Overview")
                     }
                     .frame(width: 80, height: 50)
+                    .foregroundColor(.black)
                 }
                 NavigationLink(destination: ContentView()) {
                     VStack {
@@ -45,6 +47,7 @@ struct TabView: View {
                         Text("Advice")
                     }
                     .frame(width: 60, height: 50)
+                    .foregroundColor(.black)
                     }
                 }
             }
