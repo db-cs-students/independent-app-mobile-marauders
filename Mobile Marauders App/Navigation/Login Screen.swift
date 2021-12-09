@@ -9,8 +9,9 @@ import SwiftUI
 
 
 struct Login_Screen: View {
-    @State var username : String = "superfinanceman57"
+    @State var username : String = ""
     @State var password : String = ""
+    @EnvironmentObject var data: Data
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
@@ -29,7 +30,7 @@ struct Login_Screen: View {
                 Spacer()
                 
                 HStack {
-                    NavigationLink(destination: Overview(values: [100, 300, 350, 500])){
+                    NavigationLink(destination: Overview(values: [data.currentBalance, 300, 350, 500])){
                         Text("Log In")
                             .frame(minWidth: 0, maxWidth: .infinity)
                             .padding()
@@ -65,5 +66,6 @@ struct Login_Screen: View {
 struct Login_Screen_Previews: PreviewProvider {
     static var previews: some View {
         Login_Screen()
+            .environmentObject(Data())
     }
 }
