@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddPayment: View {
-    @State var newPaymentName : String = "New Budget"
+    @State var newPaymentName : String = "New Payment"
     @State var newPaymentAmount : String = "100"
     @State var newPaymentType = Type.Other
     @EnvironmentObject var data : Data
@@ -30,7 +30,7 @@ struct AddPayment: View {
                     .padding(.top, 30)
                 
                 VStack(alignment: .leading) {
-                    Text("Repeat: \(newPaymentType.id)")
+                    Text("Type: \(newPaymentType.id)")
                         .padding()
                     Picker("Repeat", selection: $newPaymentType) {
                         Text("Car").tag(Type.Car)
@@ -41,12 +41,12 @@ struct AddPayment: View {
                     }
                 }
                 Spacer()
-                NavigationLink(destination: BudgetTable(), label: {
+                NavigationLink(destination: EditPayments(), label: {
                     HStack {
                         Button(action: {
-                            data.addBudget(budget: Budget(name: newBudgetName, amount: createNumber() ?? 0.00, repeatDate: newRepeatDate, daysLeft: determineDays(), pace: false))
+                            data.addPayment(payment: Payment(name: newPaymentName, amount: createNumber() ?? 0.00, type: newPaymentType))
                         }, label: {
-                            Text("Create Budget")
+                            Text("Create Payment")
                                 .frame(minWidth: 0, maxWidth: .infinity)
                                 .padding()
                                 .foregroundColor(.black)
