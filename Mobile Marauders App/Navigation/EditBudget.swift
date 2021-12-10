@@ -8,10 +8,32 @@
 import SwiftUI
 
 struct EditBudget: View {
-    @State var budgetName : String = ""
-    @State var budgetAmount : String = ""
-    @State var repeatDate = Repeat.Weekly
+    @State var budgetName : String
+    @State var budgetAmount : String
+    @State var repeatDate : Repeat
+    @EnvironmentObject var data : Data
     
+    func createNumber() -> Double? {
+        guard let budgetAmountNumber = Double(budgetAmount) else {
+            return nil
+        }
+        return budgetAmountNumber
+    }
+    
+    func determineDays() -> Int {
+        switch repeatDate {
+        case Repeat.Daily:
+            return 1
+        case Repeat.Weekly:
+            return 7
+        case Repeat.Biweekly:
+            return 14
+        case Repeat.Monthly:
+            return 30
+        default:
+            return 365
+        }
+    }
     
     var body: some View {
         ZStack {
@@ -31,12 +53,16 @@ struct EditBudget: View {
                         Text("Monthly").tag(Repeat.Monthly)
                         Text("Yearly").tag(Repeat.Yearly)
                     }
+                    .background(RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color(.white))
+                                    .shadow(radius: 2, y:2))
+                    .padding()
                 }
                 Spacer()
-                
-                HStack {
+                NavigationLink(destination: BudgetTable(), label: {
+                                HStack {
                     Button(action: {
-                        
+                        data.addBudget(budget: Budget(name: budgetName, amount: createNumber() ?? 0.00, repeatDate: repeatDate, daysLeft: determineDays(), pace: false))
                     }, label: {
                         Text("Finish")
                             .frame(minWidth: 0, maxWidth: .infinity)
@@ -49,7 +75,6 @@ struct EditBudget: View {
                     )
                     .padding()
                     Button(action: {
-                        
                     }, label: {
                         Text("Delete")
                             .frame(minWidth: 0, maxWidth: .infinity)
@@ -61,7 +86,7 @@ struct EditBudget: View {
                                     .shadow(radius: 2, y:2)
                     )
                     .padding()
-                }
+                }})
             }
         }
         .navigationBarTitle("")
@@ -72,6 +97,7 @@ struct EditBudget: View {
 
 struct EditBudget_Previews: PreviewProvider {
     static var previews: some View {
-        EditBudget()
+        EditBudget(budgetName: "", budgetAmount: "", repeatDate: Repeat.Weekly)
+            .environmentObject(Data())
     }
 }
