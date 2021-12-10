@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct SwiftUIView: View {
+struct GButton: View {
     @State private var nav = false
     var body: some View {
             NavigationView {
@@ -30,8 +30,8 @@ struct SwiftUIView: View {
             }
         }
     }
-struct SwiftUIView_Previews: PreviewProvider {
+struct GButton_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIView()
+        GButton()
     }
 }

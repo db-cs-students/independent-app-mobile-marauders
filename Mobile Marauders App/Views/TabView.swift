@@ -7,57 +7,30 @@
 
 import SwiftUI
 
-struct TabView: View {
+struct Tab: View {
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.systemPink
+      }
+
     var body: some View {
-        NavigationView {
         ZStack {
-            Color.init(red: 255.0 / 255.0, green: 174.0 / 255.0, blue: 174.0 / 255.0)
-            HStack {
-                NavigationLink(destination: ContentView()) {
-                    VStack {
-                    Image(systemName: "dollarsign.square.fill")
-                        .font(.system(size: 35))
-                        Text("Budgets")
-                    }
+            TabView {
+                ContentView()
+                    .tabItem {
+                    Label("Overview", systemImage: "list.dash")
                 }
-                .frame(width: 70, height: 50)
-                .foregroundColor(.black)
-                NavigationLink(destination: ContentView()) {
-                    VStack {
-                    Image(systemName: "creditcard")
-                        .font(.system(size: 30))
-                        Text("Payments")
-                    }
-                    .frame(width: 80, height: 50)
-                    .foregroundColor(.black)
-                }
-                NavigationLink(destination: ContentView()) {
-                    VStack {
-                    Image(systemName: "chart.bar.xaxis")
-                        .font(.system(size: 35))
-                        Text("Overview")
-                    }
-                    .frame(width: 80, height: 50)
-                    .foregroundColor(.black)
-                }
-                NavigationLink(destination: ContentView()) {
-                    VStack {
-                    Image(systemName: "lightbulb")
-                        .font(.system(size: 30))
-                        Text("Advice")
-                    }
-                    .frame(width: 60, height: 50)
-                    .foregroundColor(.black)
-                    }
+                GButton()
+                    .tabItem {
+                        Label("a thing", systemImage: "")
                 }
             }
-        .frame(width: 320, height: 60, alignment: .bottom)
+            .accentColor(Color.init(red: 250.0 / 255.0, green: 244.0 / 255.0, blue: 235.0 / 255.0))
         }
     }
 }
 
-struct TabView_Previews: PreviewProvider {
+struct Tab_Previews: PreviewProvider {
     static var previews: some View {
-        TabView()
+        Tab()
     }
 }
