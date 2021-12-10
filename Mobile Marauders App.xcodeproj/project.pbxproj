@@ -25,6 +25,7 @@
 		3DC6103F274575E0005BBD4E /* GButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6103E274575E0005BBD4E /* GButton.swift */; };
 		3DE28E11274D60DF005E229C /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE28E10274D60DF005E229C /* Overview.swift */; };
 		3DF328B42742D48C0092B446 /* New User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF328B32742D48C0092B446 /* New User.swift */; };
+		3DFBF4252762786A007B5E52 /* AddPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBF4242762786A007B5E52 /* AddPayment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		3DC6103E274575E0005BBD4E /* GButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GButton.swift; sourceTree = "<group>"; };
 		3DE28E10274D60DF005E229C /* Overview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overview.swift; sourceTree = "<group>"; };
 		3DF328B32742D48C0092B446 /* New User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "New User.swift"; sourceTree = "<group>"; };
+		3DFBF423276268A7007B5E52 /* Mobile Marauders App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Marauders App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DFBF4242762786A007B5E52 /* AddPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPayment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +88,11 @@
 			isa = PBXGroup;
 			children = (
 				3D74A95A273ED4580087EA4B /* Mobile Marauders App */,
+
 				3D2A5DC5276117250009A773 /* Mobile Marauders App.app */,
+
+				3DFBF423276268A7007B5E52 /* Mobile Marauders App.app */,
+
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +138,7 @@
 				3D8123EA275688B1004A5A57 /* AddBudget.swift */,
 				3D2FDE08275542200051A4A5 /* Payments.swift */,
 				3D8123EC27569333004A5A57 /* EditPayments.swift */,
+				3DFBF4242762786A007B5E52 /* AddPayment.swift */,
 				3D84F47A27568A900053B541 /* BudgetTable.swift */,
 			);
 			path = Navigation;
@@ -153,7 +161,11 @@
 			);
 			name = "Mobile Marauders App";
 			productName = "Mobile Marauders App";
+
 			productReference = 3D2A5DC5276117250009A773 /* Mobile Marauders App.app */;
+
+			productReference = 3DFBF423276268A7007B5E52 /* Mobile Marauders App.app */;
+
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -207,6 +219,7 @@
 			files = (
 				3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */,
 				3D2D3A6827592FDC007E9F32 /* Structs.swift in Sources */,
+				3DFBF4252762786A007B5E52 /* AddPayment.swift in Sources */,
 				3D74A95C273ED4580087EA4B /* Mobile_Marauders_AppApp.swift in Sources */,
 				3DE28E11274D60DF005E229C /* Overview.swift in Sources */,
 				3DF328B42742D48C0092B446 /* New User.swift in Sources */,

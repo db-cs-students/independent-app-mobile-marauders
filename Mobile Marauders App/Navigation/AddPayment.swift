@@ -1,57 +1,43 @@
 //
-//  AddBudget.swift
+//  AddPayment.swift
 //  Mobile Marauders App
 //
-//  Created by Logan L on 11/30/21.
+//  Created by Logan L on 12/9/21.
 //
 
 import SwiftUI
 
-struct AddBudget: View {
-    @State var newBudgetName : String = "New Budget"
-    @State var newBudgetAmount : String = "100"
-    @State var newRepeatDate = Repeat.Daily
+struct AddPayment: View {
+    @State var newPaymentName : String = "New Payment"
+    @State var newPaymentAmount : String = "100"
+    @State var newPaymentType = Type.Other
     @EnvironmentObject var data : Data
     
     func createNumber() -> Double? {
-        guard let newBudgetAmountNumber = Double(newBudgetAmount) else {
+        guard let newPaymentAmountNumber = Double(newPaymentAmount) else {
             return nil
         }
-        return newBudgetAmountNumber
+        return newPaymentAmountNumber
     }
     
-    func determineDays() -> Int {
-        switch newRepeatDate {
-        case Repeat.Daily:
-            return 1
-        case Repeat.Weekly:
-            return 7
-        case Repeat.Biweekly:
-            return 14
-        case Repeat.Monthly:
-            return 30
-        default:
-            return 365
-        }
-    }
     
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
             VStack {
-                CustomTextField(title: "Name:", preview: "Budget Name", text: $newBudgetName)
-                CustomNumberTextField(title: "Amount:", preview: "Budget Amount ($)", text: $newBudgetAmount)
+                CustomTextField(title: "Name:", preview: "Budget Name", text: $newPaymentName)
+                CustomNumberTextField(title: "Amount:", preview: "Budget Amount ($)", text: $newPaymentAmount)
                     .padding(.top, 30)
                 
                 VStack(alignment: .leading) {
-                    Text("Repeat: \(newRepeatDate.id)")
+                    Text("Type: \(newPaymentType.id)")
                         .padding()
-                    Picker("Repeat", selection: $newRepeatDate) {
-                        Text("Daily").tag(Repeat.Daily)
-                        Text("Weekly").tag(Repeat.Weekly)
-                        Text("Biweekly").tag(Repeat.Biweekly)
-                        Text("Monthly").tag(Repeat.Monthly)
-                        Text("Yearly").tag(Repeat.Yearly)
+                    Picker("Repeat", selection: $newPaymentType) {
+                        Text("Car").tag(Type.Car)
+                        Text("House").tag(Type.House)
+                        Text("Phone").tag(Type.Phone)
+                        Text("Credit").tag(Type.Credit)
+                        Text("Other").tag(Type.Other)
                     }
                     .background(RoundedRectangle(cornerRadius: 10)
                                     .fill(Color(.white))
@@ -59,12 +45,12 @@ struct AddBudget: View {
                     .padding()
                 }
                 Spacer()
-                NavigationLink(destination: BudgetTable(), label: {
+                NavigationLink(destination: EditPayments(), label: {
                     HStack {
                         Button(action: {
-                            data.addBudget(budget: Budget(name: newBudgetName, amount: createNumber() ?? 0.00, repeatDate: newRepeatDate, daysLeft: determineDays(), pace: false))
+                            data.addPayment(payment: Payment(name: newPaymentName, amount: createNumber() ?? 0.00, type: newPaymentType))
                         }, label: {
-                            Text("Create Budget")
+                            Text("Create Payment")
                                 .frame(minWidth: 0, maxWidth: .infinity)
                                 .padding()
                                 .foregroundColor(.black)
@@ -97,9 +83,8 @@ struct AddBudget: View {
     }
 }
 
-struct AddBudget_Previews: PreviewProvider {
+struct AddPayment_Previews: PreviewProvider {
     static var previews: some View {
-        AddBudget()
-            .environmentObject(Data())
+        AddPayment()
     }
 }
