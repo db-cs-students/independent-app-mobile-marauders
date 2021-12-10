@@ -9,7 +9,7 @@ import Foundation
 
 class Data: ObservableObject {
     @Published var payments: [Payment] = [Payment(name: "Car Payment", amount: 200.00, type: Type.Car), Payment(name: "House Payment", amount: 600.00, type: Type.House), Payment(name:"Phone Payment", amount: 125.00, type: Type.Phone)]
-    @Published var budgets : [Budget] = [Budget(name: "Subscriptions", amount: 50.00, repeatDate: Repeat.Monthly, daysLeft: 30, pace: false)]
+    @Published var budgets : [Budget] = [Budget(name: "Subscriptions", amount: 50.00, repeatDate: Repeat.Monthly, daysLeft: 30, pace: false), Budget(name: "Food", amount: 200.00, repeatDate: Repeat.Weekly, daysLeft: 4, pace: true), Budget(name: "Car", amount: 90.00, repeatDate: Repeat.Monthly, daysLeft: 18, pace: true)]
     @Published var monthlyIncome : Double = 2500.00
     @Published var monthlyExpenses : Double = 1234.00
     @Published var currentBalance : Double = 120.00
