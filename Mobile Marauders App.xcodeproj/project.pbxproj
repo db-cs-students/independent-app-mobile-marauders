@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D4A161127553DF900B7FDE8 /* AdviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A161027553DF900B7FDE8 /* AdviceView.swift */; };
 		3D16E3A827480EC20035D0E1 /* EditBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D16E3A727480EC20035D0E1 /* EditBudget.swift */; };
 		3D2A5DC9276119F10009A773 /* BudgetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A5DC8276119F10009A773 /* BudgetRow.swift */; };
 		3D2D3A6827592FDC007E9F32 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D3A6727592FDC007E9F32 /* Structs.swift */; };
@@ -19,6 +20,13 @@
 		3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D74A95D273ED4580087EA4B /* ContentView.swift */; };
 		3D74A960273ED45B0087EA4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D74A95F273ED45B0087EA4B /* Assets.xcassets */; };
 		3D74A963273ED45B0087EA4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D74A962273ED45B0087EA4B /* Preview Assets.xcassets */; };
+		3DAB90A1273EDA6900C0DF38 /* GButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAB90A0273EDA6900C0DF38 /* GButton.swift */; };
+		3DB3F53F2746BD87004DA4BE /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3F53E2746BD87004DA4BE /* OverlayView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D4A161027553DF900B7FDE8 /* AdviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceView.swift; sourceTree = "<group>"; };
+		3D74A958273ED4580087EA4B /* Mobile Marauders App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Marauders App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D8123EB275688B1004A5A57 /* AddBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8123EA275688B1004A5A57 /* AddBudget.swift */; };
 		3D8123ED27569333004A5A57 /* EditPayments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8123EC27569333004A5A57 /* EditPayments.swift */; };
 		3D84F47B27568A900053B541 /* BudgetTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D84F47A27568A900053B541 /* BudgetTable.swift */; };
@@ -43,6 +51,8 @@
 		3D74A95F273ED45B0087EA4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D74A962273ED45B0087EA4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D74A964273ED45B0087EA4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DAB90A0273EDA6900C0DF38 /* GButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GButton.swift; sourceTree = "<group>"; tabWidth = 4; };
+		3DB3F53E2746BD87004DA4BE /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		3D8123EA275688B1004A5A57 /* AddBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudget.swift; sourceTree = "<group>"; };
 		3D8123EC27569333004A5A57 /* EditPayments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPayments.swift; sourceTree = "<group>"; };
 		3D84F47A27568A900053B541 /* BudgetTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetTable.swift; sourceTree = "<group>"; };
@@ -120,6 +130,12 @@
 			sourceTree = "<group>";
 		};
 		3D74A96D273ED5CF0087EA4B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D74A95D273ED4580087EA4B /* ContentView.swift */,
+				3DAB90A0273EDA6900C0DF38 /* GButton.swift */,
+				3DB3F53E2746BD87004DA4BE /* OverlayView.swift */,
+				3D4A161027553DF900B7FDE8 /* AdviceView.swift */,
 			isa = PBXGroup;
 			children = (
 				3D74A95D273ED4580087EA4B /* ContentView.swift */,
@@ -217,7 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D4A161127553DF900B7FDE8 /* AdviceView.swift in Sources */,
 				3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */,
+				3DB3F53F2746BD87004DA4BE /* OverlayView.swift in Sources */,
+				3D74A95C273ED4580087EA4B /* Mobile_Marauders_AppApp.swift in Sources */,
+				3DAB90A1273EDA6900C0DF38 /* GButton.swift in Sources */,
 				3D2D3A6827592FDC007E9F32 /* Structs.swift in Sources */,
 				3DFBF4252762786A007B5E52 /* AddPayment.swift in Sources */,
 				3D74A95C273ED4580087EA4B /* Mobile_Marauders_AppApp.swift in Sources */,
