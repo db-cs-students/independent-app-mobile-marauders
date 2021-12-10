@@ -5,7 +5,7 @@
 This app is meant for budgeting purposes, along with tracking user's payments, expenses, and giving the user advice for their financial journey.
 
 ### Who made what?
-Logan:
+Logan: Everything to do with the Payments, from the view of what's due, to the payment list, and the add payment view. I also made the editing and adding budgets view, the overview screen, the new user screen, the login screen, and the user question screen.
 Ian:
 Grant:
 
