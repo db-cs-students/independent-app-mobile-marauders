@@ -43,6 +43,7 @@
       "size" : "60x60"
     },
     {
+      "filename" : "iPhone_App_60_3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
@@ -90,11 +91,13 @@
       "size" : "76x76"
     },
     {
+      "filename" : "iPad_App_76_2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
     },
     {
+      "filename" : "iPad_Pro_App_83.5_2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
