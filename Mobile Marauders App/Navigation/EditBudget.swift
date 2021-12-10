@@ -53,6 +53,10 @@ struct EditBudget: View {
                         Text("Monthly").tag(Repeat.Monthly)
                         Text("Yearly").tag(Repeat.Yearly)
                     }
+                    .background(RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color(.white))
+                                    .shadow(radius: 2, y:2))
+                    .padding()
                 }
                 Spacer()
                 NavigationLink(destination: BudgetTable(), label: {

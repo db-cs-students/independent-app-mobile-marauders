@@ -39,6 +39,10 @@ struct AddPayment: View {
                         Text("Credit").tag(Type.Credit)
                         Text("Other").tag(Type.Other)
                     }
+                    .background(RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color(.white))
+                                    .shadow(radius: 2, y:2))
+                    .padding()
                 }
                 Spacer()
                 NavigationLink(destination: EditPayments(), label: {
