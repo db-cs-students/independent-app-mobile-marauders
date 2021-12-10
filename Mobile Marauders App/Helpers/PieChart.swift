@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+
+// Code for the pie chart used from this website: https://betterprogramming.pub/build-pie-charts-in-swiftui-822651fbf3f2
+
 struct PieSliceData {
     var startAngle: Angle
     var endAngle: Angle
