@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Mobile_Marauders_AppApp: App {
+    @StateObject private var data = Data()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(data)
         }
     }
 }
