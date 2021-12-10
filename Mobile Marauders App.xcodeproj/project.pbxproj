@@ -22,6 +22,7 @@
 		3D8123EB275688B1004A5A57 /* AddBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8123EA275688B1004A5A57 /* AddBudget.swift */; };
 		3D8123ED27569333004A5A57 /* EditPayments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8123EC27569333004A5A57 /* EditPayments.swift */; };
 		3D84F47B27568A900053B541 /* BudgetTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D84F47A27568A900053B541 /* BudgetTable.swift */; };
+		3D86975F2763CADB00B9C5F0 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D86975E2763CADB00B9C5F0 /* ProgressBar.swift */; };
 		3DC6103F274575E0005BBD4E /* GButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6103E274575E0005BBD4E /* GButton.swift */; };
 		3DE28E11274D60DF005E229C /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE28E10274D60DF005E229C /* Overview.swift */; };
 		3DF328B42742D48C0092B446 /* New User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF328B32742D48C0092B446 /* New User.swift */; };
@@ -45,6 +46,7 @@
 		3D8123EA275688B1004A5A57 /* AddBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudget.swift; sourceTree = "<group>"; };
 		3D8123EC27569333004A5A57 /* EditPayments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPayments.swift; sourceTree = "<group>"; };
 		3D84F47A27568A900053B541 /* BudgetTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetTable.swift; sourceTree = "<group>"; };
+		3D86975E2763CADB00B9C5F0 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		3DC6103E274575E0005BBD4E /* GButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GButton.swift; sourceTree = "<group>"; };
 		3DE28E10274D60DF005E229C /* Overview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overview.swift; sourceTree = "<group>"; };
 		3DF328B32742D48C0092B446 /* New User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "New User.swift"; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				3D56A904275FD11A003F93F1 /* TextField.swift */,
 				3D56A905275FD11A003F93F1 /* PieChart.swift */,
 				3D2A5DC8276119F10009A773 /* BudgetRow.swift */,
+				3D86975E2763CADB00B9C5F0 /* ProgressBar.swift */,
 			);
 			name = Helpers;
 			path = "Mobile Marauders App/Helpers";
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D74A95E273ED4580087EA4B /* ContentView.swift in Sources */,
+				3D86975F2763CADB00B9C5F0 /* ProgressBar.swift in Sources */,
 				3D2D3A6827592FDC007E9F32 /* Structs.swift in Sources */,
 				3D74A95C273ED4580087EA4B /* Mobile_Marauders_AppApp.swift in Sources */,
 				3DE28E11274D60DF005E229C /* Overview.swift in Sources */,
