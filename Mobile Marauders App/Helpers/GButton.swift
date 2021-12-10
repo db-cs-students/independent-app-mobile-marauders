@@ -20,7 +20,7 @@ struct SwiftUIView: View {
                     }
                     .frame(width: 270, height: 50)
                     .cornerRadius(50.0)
-                    .shadow(radius: 8)
+                    .shadow(radius: 2)
             
                 if nav {
                     NavigationLink(destination: Text("Second View")) {

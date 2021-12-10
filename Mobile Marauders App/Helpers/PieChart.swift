@@ -40,13 +40,6 @@ struct PieSliceView : View {
                         clockwise: false)
                 }
                 .fill(pieSliceData.color)
-                
-//                Text(pieSliceData.text)
-//                    .foregroundColor(Color("PiePercentage"))
-//                    .position(
-//                        x: geometry.size.width * 0.5 * CGFloat(1.0 + 0.78 * cos(self.midRadians)),
-//                        y: geometry.size.height * 0.5 * CGFloat(1.0 - 0.78 * sin(self.midRadians))
-//                    )
             }
             .shadow(radius: 2.0)
         }
@@ -126,7 +119,7 @@ struct PieChart: View {
                             .foregroundColor(.gray)
                     }
                 }
-                TableRows(colors: self.colors, names: self.names, values: self.values.map { String($0) }, percents: self.values.map { String(format: "%.0f%%", $0 * 100 / self.values.reduce(0, +)) })
+                TableRows(colors: self.colors, names: self.names, values: self.values.map { String($0) }, percents: self.values.map { String(format: "%.2f%%", $0 * 100 / self.values.reduce(0, +)) })
                     .padding()
                 Spacer()
             }
