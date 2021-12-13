@@ -57,7 +57,7 @@ struct New_User: View {
                             )
                             .padding()
                     })
-                    .disabled(validatePasswords())
+                    .disabled(!validatePasswords())
             }
         }
         .navigationBarTitle("")
