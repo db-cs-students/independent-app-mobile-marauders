@@ -11,3 +11,8 @@ Grant: <br>
 
 ### How do you start the app?
 The app intializes at the login screen. If you want to provide your own value to the user's information, then tap "New User" on the login screen. The password validation for the new user needs the passwords to be equal and longer than ten characters. If you don't want to provide user information, then just tap "Log In".
+
+### Credits
+webView by DaChun on stackoverflow.com
+Image Credit: https://www.pngaaa.com/detail/109128
+Pie Chart View by Nazar Ilamanowv on betterprogramming.hub 
